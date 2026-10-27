@@ -80,10 +80,10 @@ flowchart LR
 
 **GiGPO：** 在相同终局奖励上加入同状态组的步骤优势：
 
-\[
+$$
 A_{i,t}=A_i^{episode}+\omega A_{i,t}^{step},\qquad
 G_{i,t}=\gamma^{T_i-1-t}R_i
-\]
+$$
 
 本实现 `gamma=0.95, omega=1`，把终局奖励放在最后一个模型决策。在同任务、同 rollout group 内，对**完全相同策略输入 token 前缀**的动作比较后续折扣回报；单样本组、同回报组的步骤优势为 0。它不需要 PRM、critic 或额外分支采样。
 

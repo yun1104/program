@@ -95,13 +95,13 @@ strict_pass = official_pass
 
 两组 RL 均使用：
 
-\[
+$$
 R(\tau)=
 \begin{cases}
 1-\min(0.002N_{tool},0.2),& strict\_pass\\
 -0.1\min(N_{invalid}+N_{schema},5),& otherwise
 \end{cases}
-\]
+$$
 
 没有协议/schema 错误的失败为 0。成功才扣调用成本，避免鼓励失败后提前结束来节省调用；没有奖励“任意一次成功工具调用”。GiGPO 实验改变的是信用分配，不是增加了 PRM 或人工步骤奖励。
 
@@ -144,17 +144,17 @@ GRPO 梯度路径使用 fused/chunked loss，旧策略和参考策略概率分�
 
 参考 GiGPO 原文的折扣回报、anchor grouping 和组合优势思想，使用采样标准差与 `epsilon=1e-4`，与本项目 TRL 组归一化方式一致：
 
-\[
+$$
 A_i^E=\frac{R_i-\operatorname{mean}_{j\in group}(R_j)}{\operatorname{std}_{j\in group}(R_j)+10^{-4}}
-\]
+$$
 
 终局奖励放在最后一个模型决策，包括没有提交最终回答的失败轨迹，因此：
 
-\[
+$$
 G_{i,t}=\gamma^{T_i-1-t}R_i,\quad
 A_{i,t}^S=\frac{G_{i,t}-\operatorname{mean}_{(j,u)\in anchor}(G_{j,u})}{\operatorname{std}_{(j,u)\in anchor}(G_{j,u})+10^{-4}},\quad
 A_{i,t}=A_i^E+\omega A_{i,t}^S
-\]
+$$
 
 `gamma=.95, omega=1`。同一动作的所有实际生成 token 获得相同动作优势。单样本 anchor 和常数回报组的步骤优势为 0，不人为制造信号；`omega=0` 可作为同执行栈的轨迹级消融。
 
