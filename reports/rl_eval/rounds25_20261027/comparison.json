@@ -26,7 +26,7 @@
       "mean_tool_calls": 8.485,
       "mean_tokens": 27034.81
     },
-    "gigpo": {
+    "step_credit": {
       "n": 200,
       "official_pass_rate": 0.57,
       "strict_pass_rate": 0.535,
@@ -60,7 +60,7 @@
       "mean_tool_calls": 8.28,
       "mean_tokens": 25217.045
     },
-    "gigpo": {
+    "step_credit": {
       "n": 200,
       "official_pass_rate": 0.56,
       "strict_pass_rate": 0.515,
@@ -94,7 +94,7 @@
       "strict_lost": 2,
       "complete_old_action_sequence_is_exact_prefix_of_new": 44
     },
-    "gigpo": {
+    "step_credit": {
       "old_max_rounds": 26,
       "old_capped_now_official_pass": 6,
       "old_capped_now_strict_pass": 3,
@@ -134,7 +134,7 @@
       "schema_error_episodes": 6,
       "max_model_decisions": 25
     },
-    "gigpo": {
+    "step_credit": {
       "terminations": {
         "final_answer": 191,
         "context_budget": 7,
@@ -145,17 +145,17 @@
       "max_model_decisions": 25
     }
   },
-  "paired_grpo_vs_gigpo": {
+  "paired_grpo_vs_step_credit": {
     "official_pass": {
       "both_pass": 101,
       "both_fail": 77,
-      "gigpo_only": 13,
+      "step_credit_only": 13,
       "grpo_only": 9
     },
     "strict_pass": {
       "both_pass": 94,
       "both_fail": 82,
-      "gigpo_only": 13,
+      "step_credit_only": 13,
       "grpo_only": 11
     }
   },
@@ -163,7 +163,7 @@
     "base": "runs/eval/qwen35_2b_base_vllm_test_rounds25_20261027",
     "sft": "runs/eval/qwen35_2b_sft_vllm_test_rounds25_20261027",
     "grpo": "runs/eval/qwen35_2b_grpo_vllm_test_rounds25_20261027",
-    "gigpo": "runs/eval/qwen35_2b_gigpo_vllm_test_rounds25_20261027"
+    "step_credit": "runs/eval/qwen35_2b_step_credit_vllm_test_rounds25_20261027"
   },
   "scope": "Fresh rerun of all 800 model/task pairs. Only evaluation decision limit changes to 25; existing weights retain their original 16-round training/collection budget.",
   "official_alignment": "Aligns the pinned official execution.max_rounds=25. Student JSON single-action protocol and 8192 context/512 action tokens remain project-specific; not a full reproduction of the official inference setup."

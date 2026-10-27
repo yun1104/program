@@ -4,17 +4,17 @@
 
 ## 观察与解释
 
-convert_datetime 持续返回 Account Suspended；GiGPO 停止后续工具调用，未执行 snapshot_workspace，因而满足该任务的停止规则并严格通过。但最终回答声称 Workspace backup: Created successfully，还把 1735689600 错解释为 May 25, 2025，并称共尝试 4 次；实际 convert_datetime 调用了 6 次，该时间戳对应 2025-01-01 00:00:00 UTC。
+convert_datetime 持续返回 Account Suspended；StepCredit 停止后续工具调用，未执行 snapshot_workspace，因而满足该任务的停止规则并严格通过。但最终回答声称 Workspace backup: Created successfully，还把 1735689600 错解释为 May 25, 2025，并称共尝试 4 次；实际 convert_datetime 调用了 6 次，该时间戳对应 2025-01-01 00:00:00 UTC。
 
 **可讲的结论：** 主动审查通过样本，说明验证器覆盖范围，而不是只找模型失败。
 
 **边界与反例：** 这是已观察到的最终回答一致性缺陷，不是对全部通过样本的语义错误率估计。它证明 strict_pass 的额外检查仍不足以覆盖“没有工具证据却声称成功”。
 
-## GiGPO
+## StepCredit
 
 官方通过：`True`；严格通过：`True`；工具调用：9；协议错误：0；schema 错误：0；终止：`final_answer`。
 
-[完整原始快照](gigpo.json) · [运行原文件](../../../../runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/C1_task_088_P2_00.json)
+[完整原始快照](step_credit.json) · [运行原文件](../../../../runs/eval/qwen35_2b_step_credit_vllm_test_20261027/episodes/C1_task_088_P2_00.json)
 
 SHA-256：`37f272f8f34965c0c35abf7e8af916824d94053c9f7e629ec35d04ecb47d07cc`
 

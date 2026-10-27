@@ -1,0 +1,42 @@
+{
+  "state": "complete",
+  "gpu": 4,
+  "launcher_pid": 3592181,
+  "command": [
+    "/home/ruanwenxuan/miniconda3/envs/sftrl/bin/python",
+    "-u",
+    "-m",
+    "torch.distributed.run",
+    "--standalone",
+    "--nproc_per_node=1",
+    "-m",
+    "scripts.toolmaze_agent.train_step_credit",
+    "--config",
+    "scripts/toolmaze_agent/configs/step_credit_smoke.yaml"
+  ],
+  "started_at_unix": 1793030198.699306,
+  "original_source_sha256": {
+    "scripts/toolmaze_agent/collect.py": "d1f21d219262a9632840043768732fc91220ccf46ff18bc3101d71b423f45751",
+    "scripts/toolmaze_agent/train_rl.py": "e245f74bda50ee4259fdefcf1561668b2980e07cb2a64db9ae88cbc4c32fe7e1",
+    "scripts/toolmaze_agent/common.py": "edcab57c3fa41e43626d48e7de7c47952fe2bf68b9c21d25d13591ffbc83a7d5",
+    "scripts/toolmaze_agent/tool_schema_cache.py": "37a813ba566b43d0ce09c40e3f31a767897eb50e1a9068a649e0ec3a870d85ef",
+    "scripts/toolmaze_agent/protocol.py": "df716955072f6926a42b5ca843279ca8c3bd7f2d29b8b49931b559fea6934993",
+    "scripts/toolmaze_agent/report.py": "8c03e0ce592ad3decaa34ed2fc5609f1006c06a0bc415814c2051c93e91298c8",
+    "scripts/toolmaze_agent/rl_trainer.py": "5d27aff3db57ec4a0b8c4a7d663a80dd37c32fc02821365956dab79d90d5a64c",
+    "scripts/toolmaze_agent/vllm_backend.py": "cf0cdd241c45a478286b5e4fab9b36876cc3dea8ba50761f9d20be90505896a8",
+    "scripts/toolmaze_agent/rollout.py": "70fcf86b94711305e90106627c1cf9818ab550b1d600e7e37f55a258d9924d03",
+    "scripts/toolmaze_agent/rl_vllm_rollout.py": "f231f253a948be092e6437af57c8257a9ea23eba1722f56b0185ee7fe4356f58",
+    "scripts/toolmaze_agent/prepare.py": "8a1e7323ef7c4c813ece4d7ff52527493c730424fe2b729e1596eddc667c6405",
+    "scripts/toolmaze_agent/eval.py": "bbf17d2292485ea2187d6ba5dbb00c699b80ac71a996cad2d29bc56b5e8a8a31",
+    "scripts/toolmaze_agent/__init__.py": "be43fcdd1a4b48644bef2a9d525b2e12cdd3f54efa093538b786d800483d173f",
+    "scripts/toolmaze_agent/build_sft.py": "d68099cf4ebeec6c14c5fef086d3a5c2b678f2291c7480f84472bfc7dfc82052",
+    "scripts/toolmaze_agent/policy.py": "dd3f1c3749e5a431b6be5ebf1f446486fb618a4b43771640bd5a7e37544840d9",
+    "scripts/toolmaze_agent/train_sft.py": "e384f7e0a97604821c2630447089c8d0a5a991cc13e6185221935d5c5de67f0d",
+    "scripts/toolmaze_agent/environment.py": "5b50cb43afd4bf9530b14dfb5f5b18453fa5985110cc1b08142edafc31c17f26",
+    "tools/run_rl.py": "8ab81fd564a26b804fe6f71b024de885e39e2429bb2016bc9a0cb0477961bd6b"
+  },
+  "trainer_pid": 3592190,
+  "returncode": 0,
+  "ended_at_unix": 1793031111.8103113,
+  "original_sources_unchanged": true
+}

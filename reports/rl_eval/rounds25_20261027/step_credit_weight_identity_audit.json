@@ -1,0 +1,5 @@
+{
+  "model": "step_credit",
+  "same_adapter_sha256": true,
+  "same_merged_weights": true
+}

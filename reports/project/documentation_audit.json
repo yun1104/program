@@ -5,8 +5,8 @@
   "cases": 7,
   "snapshots": 11,
   "snapshot_hashes_match_originals": true,
-  "gigpo_training_batches": 80,
-  "gigpo_advantage_counts": {
+  "step_credit_training_batches": 80,
+  "step_credit_advantage_counts": {
     "actions": 125425,
     "noninitial_actions": 112625,
     "shared_noninitial_actions": 58024,

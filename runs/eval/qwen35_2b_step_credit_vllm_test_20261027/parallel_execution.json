@@ -1,0 +1,17 @@
+{
+  "gpus": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+  ],
+  "shards": 7,
+  "inherited_completed_episodes": [],
+  "prior_identity": null,
+  "shard_dir": "step_credit_eval_shards",
+  "runtime_tuning_authorized": false,
+  "policy": "Reuse every completed result; no success-based selection; seeds depend on task/trial/step only"
+}

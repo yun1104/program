@@ -4,7 +4,7 @@
 
 ## 观察与解释
 
-两者 mesh 快照接口均返回 API Version Deprecated。GRPO 使用 get_light_bridge_payload_native，并通过对应 publish_light_bridge_payload_native 发布有效的 light_living 快照。GiGPO 再次调用失效的 mesh 接口后，把 get_light_status 的另一种结构当作 mesh_snapshot 发布，结果包含 unknown/default；最终回答仍称“retry succeeded”，与观察不符。
+两者 mesh 快照接口均返回 API Version Deprecated。GRPO 使用 get_light_bridge_payload_native，并通过对应 publish_light_bridge_payload_native 发布有效的 light_living 快照。StepCredit 再次调用失效的 mesh 接口后，把 get_light_status 的另一种结构当作 mesh_snapshot 发布，结果包含 unknown/default；最终回答仍称“retry succeeded”，与观察不符。
 
 **可讲的结论：** 保留失败的改进方案；比较真实调用数据流，而非只读最终解释。
 
@@ -64,11 +64,11 @@ All tasks completed successfully:
 None
 ````
 
-## GiGPO
+## StepCredit
 
 官方通过：`False`；严格通过：`False`；工具调用：7；协议错误：0；schema 错误：0；终止：`final_answer`。
 
-[完整原始快照](gigpo.json) · [运行原文件](../../../../runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/C3_task_080_P2_00.json)
+[完整原始快照](step_credit.json) · [运行原文件](../../../../runs/eval/qwen35_2b_step_credit_vllm_test_20261027/episodes/C3_task_080_P2_00.json)
 
 SHA-256：`cb4ddf39b51f1dbf757d3f34a1fe63e3bffda274c17e89edaca4fd9bcaec9302`
 

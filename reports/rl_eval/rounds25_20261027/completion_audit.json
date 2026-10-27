@@ -26,7 +26,7 @@
       "infrastructure_errors": 0,
       "reused_16_round_episodes": 0
     },
-    "gigpo": {
+    "step_credit": {
       "episodes": 200,
       "max_decisions": 25,
       "official_pass": 114,

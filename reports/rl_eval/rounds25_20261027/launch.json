@@ -33,10 +33,10 @@
         "adapter": "runs/grpo_lora_recovery_20261026/final"
       },
       {
-        "name": "gigpo",
-        "config": "scripts/toolmaze_agent/configs/gigpo_eval_rounds25.yaml",
-        "historical_16_run": "runs/eval/qwen35_2b_gigpo_vllm_test_20261027",
-        "adapter": "runs/gigpo_full_20261027/final"
+        "name": "step_credit",
+        "config": "scripts/toolmaze_agent/configs/step_credit_eval_rounds25.yaml",
+        "historical_16_run": "runs/eval/qwen35_2b_step_credit_vllm_test_20261027",
+        "adapter": "runs/step_credit_full_20261027/final"
       }
     ]
   },
@@ -79,8 +79,8 @@
       },
       "max_model_decisions": 25
     },
-    "gigpo": {
-      "run": "runs/eval/qwen35_2b_gigpo_vllm_test_rounds25_20261027",
+    "step_credit": {
+      "run": "runs/eval/qwen35_2b_step_credit_vllm_test_rounds25_20261027",
       "metrics": {
         "n": 200,
         "official_pass_rate": 0.57,
@@ -93,7 +93,7 @@
     }
   },
   "policy": "Fresh 25-round evaluations, no inheritance from 16-round episodes; same frozen final weights.",
-  "current_model": "gigpo",
+  "current_model": "step_credit",
   "phase": "complete",
   "child_pid": 2940949,
   "ended_at_unix": 1793076556.123405

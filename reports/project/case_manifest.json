@@ -36,9 +36,9 @@
       "task": "C1_task_041:P2",
       "records": [
         {
-          "model": "GiGPO",
-          "source": "runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/C1_task_041_P2_00.json",
-          "snapshot": "reports/project/cases/02_stop/gigpo.json",
+          "model": "StepCredit",
+          "source": "runs/eval/qwen35_2b_step_credit_vllm_test_20261027/episodes/C1_task_041_P2_00.json",
+          "snapshot": "reports/project/cases/02_stop/step_credit.json",
           "sha256": "6e820fa2f3b3d36023dbef80aa5d56bae9ea31031937c49f236da7f0d8927eff",
           "official_pass": true,
           "strict_pass": true,
@@ -68,13 +68,13 @@
       ]
     },
     {
-      "slug": "04_gigpo_win",
+      "slug": "04_step_credit_win",
       "task": "C3_task_094:P3",
       "records": [
         {
           "model": "GRPO",
           "source": "runs/eval/qwen35_2b_grpo_vllm_test_20261027/episodes/C3_task_094_P3_00.json",
-          "snapshot": "reports/project/cases/04_gigpo_win/grpo.json",
+          "snapshot": "reports/project/cases/04_step_credit_win/grpo.json",
           "sha256": "06e00dedf2fbf08a7cefc21f9569a855645b782e44a48ceb8d2edfb6ba739d49",
           "official_pass": false,
           "strict_pass": false,
@@ -84,9 +84,9 @@
           "termination": "final_answer"
         },
         {
-          "model": "GiGPO",
-          "source": "runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/C3_task_094_P3_00.json",
-          "snapshot": "reports/project/cases/04_gigpo_win/gigpo.json",
+          "model": "StepCredit",
+          "source": "runs/eval/qwen35_2b_step_credit_vllm_test_20261027/episodes/C3_task_094_P3_00.json",
+          "snapshot": "reports/project/cases/04_step_credit_win/step_credit.json",
           "sha256": "4c040b1a5c700ac9a49a42c2752364526ce550730edec887162680fc6640ac0d",
           "official_pass": true,
           "strict_pass": true,
@@ -114,9 +114,9 @@
           "termination": "final_answer"
         },
         {
-          "model": "GiGPO",
-          "source": "runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/C3_task_080_P2_00.json",
-          "snapshot": "reports/project/cases/05_grpo_win/gigpo.json",
+          "model": "StepCredit",
+          "source": "runs/eval/qwen35_2b_step_credit_vllm_test_20261027/episodes/C3_task_080_P2_00.json",
+          "snapshot": "reports/project/cases/05_grpo_win/step_credit.json",
           "sha256": "cb4ddf39b51f1dbf757d3f34a1fe63e3bffda274c17e89edaca4fd9bcaec9302",
           "official_pass": false,
           "strict_pass": false,
@@ -144,9 +144,9 @@
           "termination": "final_answer"
         },
         {
-          "model": "GiGPO",
-          "source": "runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/C1_task_041_P4_00.json",
-          "snapshot": "reports/project/cases/06_shared_failure/gigpo.json",
+          "model": "StepCredit",
+          "source": "runs/eval/qwen35_2b_step_credit_vllm_test_20261027/episodes/C1_task_041_P4_00.json",
+          "snapshot": "reports/project/cases/06_shared_failure/step_credit.json",
           "sha256": "e9cd46018412892673f2dc8c03438ab737bd63e5375a958a678e10de8e12d32c",
           "official_pass": false,
           "strict_pass": false,
@@ -162,9 +162,9 @@
       "task": "C1_task_088:P2",
       "records": [
         {
-          "model": "GiGPO",
-          "source": "runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/C1_task_088_P2_00.json",
-          "snapshot": "reports/project/cases/07_metric_boundary/gigpo.json",
+          "model": "StepCredit",
+          "source": "runs/eval/qwen35_2b_step_credit_vllm_test_20261027/episodes/C1_task_088_P2_00.json",
+          "snapshot": "reports/project/cases/07_metric_boundary/step_credit.json",
           "sha256": "37f272f8f34965c0c35abf7e8af916824d94053c9f7e629ec35d04ecb47d07cc",
           "official_pass": true,
           "strict_pass": true,

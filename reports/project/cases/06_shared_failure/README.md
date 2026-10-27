@@ -4,7 +4,7 @@
 
 ## 观察与解释
 
-order_items 返回非空的两项 sorted_items，却给出 count=0；列表顺序为价格 399 在前、249 在后，同时 order=asc。两者均未正确停止，继续 push_alert 宣称推荐已排序。GRPO 在最后提到空列表，GiGPO 将 count=0 称为工具 quirk，但告警已经使用了未验证的结果，官方判分均失败。
+order_items 返回非空的两项 sorted_items，却给出 count=0；列表顺序为价格 399 在前、249 在后，同时 order=asc。两者均未正确停止，继续 push_alert 宣称推荐已排序。GRPO 在最后提到空列表，StepCredit 将 count=0 称为工具 quirk，但告警已经使用了未验证的结果，官方判分均失败。
 
 **可讲的结论：** “在最终回答中提到异常”不等于“阻断了错误操作”。
 
@@ -60,11 +60,11 @@ Two notes worth flagging:
 P4 failed: agent should have stopped but called other tools after victim: ['push_alert']
 ````
 
-## GiGPO
+## StepCredit
 
 官方通过：`False`；严格通过：`False`；工具调用：5；协议错误：0；schema 错误：0；终止：`final_answer`。
 
-[完整原始快照](gigpo.json) · [运行原文件](../../../../runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/C1_task_041_P4_00.json)
+[完整原始快照](step_credit.json) · [运行原文件](../../../../runs/eval/qwen35_2b_step_credit_vllm_test_20261027/episodes/C1_task_041_P4_00.json)
 
 SHA-256：`e9cd46018412892673f2dc8c03438ab737bd63e5375a958a678e10de8e12d32c`
 

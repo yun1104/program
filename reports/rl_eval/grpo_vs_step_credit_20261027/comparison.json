@@ -1,0 +1,102 @@
+{
+  "runs": {
+    "Base": "runs/eval/qwen35_2b_base_vllm_test_20261026",
+    "SFT": "runs/eval/qwen35_2b_sft_vllm_test_20261026",
+    "GRPO": "runs/eval/qwen35_2b_grpo_vllm_test_20261027",
+    "StepCredit": "runs/eval/qwen35_2b_step_credit_vllm_test_20261027"
+  },
+  "n": 200,
+  "metrics": {
+    "Base": {
+      "n": 200,
+      "official_pass_rate": 0.145,
+      "strict_pass_rate": 0.095,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 6.07,
+      "mean_tokens": 29003.98
+    },
+    "SFT": {
+      "n": 200,
+      "official_pass_rate": 0.515,
+      "strict_pass_rate": 0.41,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 8.85,
+      "mean_tokens": 27669.595
+    },
+    "GRPO": {
+      "n": 200,
+      "official_pass_rate": 0.55,
+      "strict_pass_rate": 0.525,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 8.28,
+      "mean_tokens": 25217.045
+    },
+    "StepCredit": {
+      "n": 200,
+      "official_pass_rate": 0.56,
+      "strict_pass_rate": 0.515,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 8.565,
+      "mean_tokens": 26272.56
+    }
+  },
+  "behavior": {
+    "Base": {
+      "protocol_error_episodes": 121,
+      "schema_error_episodes": 22,
+      "terminations": {
+        "final_answer": 117,
+        "max_rounds": 81,
+        "context_budget": 2
+      }
+    },
+    "SFT": {
+      "protocol_error_episodes": 51,
+      "schema_error_episodes": 18,
+      "terminations": {
+        "final_answer": 159,
+        "max_rounds": 39,
+        "context_budget": 2
+      }
+    },
+    "GRPO": {
+      "protocol_error_episodes": 20,
+      "schema_error_episodes": 6,
+      "terminations": {
+        "final_answer": 186,
+        "max_rounds": 13,
+        "context_budget": 1
+      }
+    },
+    "StepCredit": {
+      "protocol_error_episodes": 27,
+      "schema_error_episodes": 7,
+      "terminations": {
+        "final_answer": 173,
+        "context_budget": 1,
+        "max_rounds": 26
+      }
+    }
+  },
+  "grpo_vs_step_credit_paired": {
+    "official_pass": {
+      "both_pass": 100,
+      "both_fail": 78,
+      "step_credit_only": 12,
+      "grpo_only": 10
+    },
+    "strict_pass": {
+      "both_pass": 93,
+      "both_fail": 85,
+      "step_credit_only": 10,
+      "grpo_only": 12
+    }
+  },
+  "generation": {
+    "temperature": 0.8,
+    "max_tokens": 512,
+    "max_context_tokens": 8192
+  },
+  "historical_sft_runtime_audit": "reports/rl_eval/grpo_vs_step_credit_20261027/sft_runtime_replay.json",
+  "limitation": "One fixed-seed trial per task. GRPO batch 128/100 updates; StepCredit batch 160/80 updates. Equal 12800-trajectory training budget, different batch size."
+}

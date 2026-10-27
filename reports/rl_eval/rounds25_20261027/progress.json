@@ -1,7 +1,7 @@
 {
   "state": "complete",
   "phase": "complete",
-  "current_model": "gigpo",
+  "current_model": "step_credit",
   "models": {
     "base": {
       "completed": 200,
@@ -36,7 +36,7 @@
       "infrastructure_errors": 0,
       "elapsed_seconds": 212.87272424600087
     },
-    "gigpo": {
+    "step_credit": {
       "completed": 200,
       "total": 200,
       "finished": true,

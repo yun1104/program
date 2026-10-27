@@ -1,0 +1,158 @@
+{
+  "state": "complete",
+  "completed_updates": 3,
+  "gpu": 4,
+  "original_sources_unchanged": true,
+  "adapter_progress": {
+    "step": 3,
+    "initial_lora_b_l2": 0.0,
+    "current_lora_b_l2": 0.11601395905017853,
+    "adapter_updated": true
+  },
+  "batches": [
+    {
+      "step": 0,
+      "actions": 46,
+      "anchor_groups": 27,
+      "shared_actions": 28,
+      "noninitial_actions": 42,
+      "shared_noninitial_actions": 24,
+      "nonzero_step_advantages": 24,
+      "nonzero_noninitial_step_advantages": 20,
+      "gamma": 0.95,
+      "omega": 1.0,
+      "anchor_mode": "exact_policy_token_prefix",
+      "diverse_action_anchor_groups": 3,
+      "noninitial_diverse_action_anchor_groups": 3,
+      "trajectories_with_varying_step_advantage": 4,
+      "episodes": [
+        {
+          "row": "C3_task_015:P1",
+          "strict_pass": true,
+          "tool_calls": 9
+        },
+        {
+          "row": "C3_task_015:P1",
+          "strict_pass": false,
+          "tool_calls": 13
+        },
+        {
+          "row": "C3_task_015:P1",
+          "strict_pass": true,
+          "tool_calls": 9
+        },
+        {
+          "row": "C3_task_015:P1",
+          "strict_pass": true,
+          "tool_calls": 9
+        }
+      ]
+    },
+    {
+      "step": 1,
+      "actions": 41,
+      "anchor_groups": 28,
+      "shared_actions": 19,
+      "noninitial_actions": 37,
+      "shared_noninitial_actions": 15,
+      "nonzero_step_advantages": 19,
+      "nonzero_noninitial_step_advantages": 15,
+      "gamma": 0.95,
+      "omega": 1.0,
+      "anchor_mode": "exact_policy_token_prefix",
+      "diverse_action_anchor_groups": 3,
+      "noninitial_diverse_action_anchor_groups": 3,
+      "trajectories_with_varying_step_advantage": 4,
+      "episodes": [
+        {
+          "row": "C3_task_015:P0",
+          "strict_pass": true,
+          "tool_calls": 8
+        },
+        {
+          "row": "C3_task_015:P0",
+          "strict_pass": false,
+          "tool_calls": 13
+        },
+        {
+          "row": "C3_task_015:P0",
+          "strict_pass": true,
+          "tool_calls": 8
+        },
+        {
+          "row": "C3_task_015:P0",
+          "strict_pass": false,
+          "tool_calls": 6
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "actions": 35,
+      "anchor_groups": 18,
+      "shared_actions": 24,
+      "noninitial_actions": 31,
+      "shared_noninitial_actions": 20,
+      "nonzero_step_advantages": 12,
+      "nonzero_noninitial_step_advantages": 8,
+      "gamma": 0.95,
+      "omega": 1.0,
+      "anchor_mode": "exact_policy_token_prefix",
+      "diverse_action_anchor_groups": 2,
+      "noninitial_diverse_action_anchor_groups": 2,
+      "trajectories_with_varying_step_advantage": 4,
+      "episodes": [
+        {
+          "row": "C3_task_015:P1",
+          "strict_pass": true,
+          "tool_calls": 9
+        },
+        {
+          "row": "C3_task_015:P1",
+          "strict_pass": false,
+          "tool_calls": 4
+        },
+        {
+          "row": "C3_task_015:P1",
+          "strict_pass": true,
+          "tool_calls": 9
+        },
+        {
+          "row": "C3_task_015:P1",
+          "strict_pass": true,
+          "tool_calls": 9
+        }
+      ]
+    }
+  ],
+  "unit_tests_log": "reports/step_credit/unit_tests.log",
+  "old_new_rollout_replay_audit": "reports/step_credit/rollout_replay_audit.json",
+  "limitation": "Integration smoke test only; no claim of benchmark improvement.",
+  "final_adapter": {
+    "tensors": 372,
+    "all_finite": true,
+    "lora_only": true,
+    "lora_b_l2": 0.11601396097753015
+  },
+  "checkpoint_markers": [
+    {
+      "step": 2,
+      "world_size": 1,
+      "optimizer_and_rng_saved": true
+    },
+    {
+      "step": 3,
+      "world_size": 1,
+      "optimizer_and_rng_saved": true
+    }
+  ],
+  "training_metrics": {
+    "train_runtime": 790.133,
+    "train_samples_per_second": 0.015,
+    "train_steps_per_second": 0.004,
+    "total_flos": 0.0,
+    "train_loss": -0.014160245656967163,
+    "epoch": 1.5
+  },
+  "smoke_rollout_replay_audit": "reports/step_credit/smoke_rollout_replay_audit.json"
+}

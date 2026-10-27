@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Evaluate final GRPO/GiGPO adapters on the frozen test set, without selection."""
+"""Evaluate final GRPO/StepCredit adapters on the frozen test set, without selection."""
 import argparse
 import json
 import os
@@ -24,7 +24,7 @@ def main():
     if len(gpus) != len(set(gpus)):
         raise ValueError('Duplicate GPU selection')
     require_idle(gpus)
-    report = ROOT/'reports/rl_eval/grpo_vs_gigpo_20261027'
+    report = ROOT/'reports/rl_eval/grpo_vs_step_credit_20261027'
     report.mkdir(parents=True, exist_ok=True)
     receipt = {'state': 'starting', 'gpus': gpus, 'launcher_pid': os.getpid(),
                'started_at_unix': time.time(), 'models': {}}
@@ -44,7 +44,7 @@ def main():
                 raise RuntimeError(f'Command failed ({code}); inspect {log}')
     try:
         for name, adapter in [('grpo','runs/grpo_lora_recovery_20261026/final'),
-                              ('gigpo','runs/gigpo_full_20261027/final')]:
+                              ('step_credit','runs/step_credit_full_20261027/final')]:
             merged = ROOT/f'.cache/rl_eval/{name}_final_20261027'
             manifest = f'artifacts/qwen35_2b_{name}_model_20261027.json'
             config_path = f'scripts/toolmaze_agent/configs/{name}_eval_vllm_20261027.yaml'

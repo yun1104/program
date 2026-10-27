@@ -15,9 +15,9 @@
       "termination": "final_answer"
     },
     {
-      "model": "GiGPO",
-      "source": "runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/C1_task_041_P4_00.json",
-      "snapshot": "reports/project/cases/06_shared_failure/gigpo.json",
+      "model": "StepCredit",
+      "source": "runs/eval/qwen35_2b_step_credit_vllm_test_20261027/episodes/C1_task_041_P4_00.json",
+      "snapshot": "reports/project/cases/06_shared_failure/step_credit.json",
       "sha256": "e9cd46018412892673f2dc8c03438ab737bd63e5375a958a678e10de8e12d32c",
       "official_pass": false,
       "strict_pass": false,

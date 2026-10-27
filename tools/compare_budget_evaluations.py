@@ -58,13 +58,13 @@ def main():
         for name,(_,_,records) in loaded.items()}
     paired={}
     for field in ('official_pass','strict_pass'):
-        a,b=loaded['grpo'][2],loaded['gigpo'][2]
+        a,b=loaded['grpo'][2],loaded['step_credit'][2]
         paired[field]=dict(Counter('both_pass' if a[k].get(field) and b[k].get(field)
-            else 'gigpo_only' if b[k].get(field) else 'grpo_only' if a[k].get(field)
+            else 'step_credit_only' if b[k].get(field) else 'grpo_only' if a[k].get(field)
             else 'both_fail' for k in a))
     report=ROOT/suite['report_output'];report.mkdir(parents=True,exist_ok=True)
     result={'max_rounds':suite['max_rounds'],'n':suite['expected_tasks'],'metrics':metrics,
-        'historical_16_metrics':history,'budget_transitions':transitions,'behavior':behavior,'paired_grpo_vs_gigpo':paired,
+        'historical_16_metrics':history,'budget_transitions':transitions,'behavior':behavior,'paired_grpo_vs_step_credit':paired,
         'runs':{e['name']:load_config(e['config'])['output'] for e in suite['models']},
         'scope':'Fresh rerun of all 800 model/task pairs. Only evaluation decision limit changes to 25; existing weights retain their original 16-round training/collection budget.',
         'official_alignment':'Aligns the pinned official execution.max_rounds=25. Student JSON single-action protocol and 8192 context/512 action tokens remain project-specific; not a full reproduction of the official inference setup.'}
@@ -84,17 +84,17 @@ def main():
     for name,t in transitions.items():
         lines.append(f"| {name} | {t['old_max_rounds']} | {t['old_capped_now_strict_pass']} | {t['strict_gained']} | {t['strict_lost']} | {t['complete_old_action_sequence_is_exact_prefix_of_new']} |")
     lines+=['','## 分扰动模式（官方 / 严格）','',
-        '| 模式 | Base | SFT | GRPO | GiGPO |','|---|---:|---:|---:|---:|']
+        '| 模式 | Base | SFT | GRPO | StepCredit |','|---|---:|---:|---:|---:|']
     for mode in range(5):
         values=[loaded[n][1]['breakdown'][f'mode/P{mode}'] for n in loaded]
         lines.append('| P'+str(mode)+' | '+' | '.join(f"{v['official_pass_rate']:.1%} / {v['strict_pass_rate']:.1%}" for v in values)+' |')
     lines+=['','## 计数与限制','',
         '25 指模型决策轮次，包含最终回答和非法动作尝试，不是允许先调用 25 次工具再额外回答。官方原生接口一轮可含多个工具调用，本项目学生协议仍是一轮一个动作。',
         '其他设置保持：temperature=.8、top_p=1、top_k 关闭、上下文 8192、单动作最多 512 tokens、seed=20261026、同一任务数据及 judge。上下文预算仍可能使轨迹在 25 轮前结束。',
-        '本次只重评测；SFT/GRPO/GiGPO 权重没有在 25 轮预算下重训，训练与评测预算不同。GRPO/GiGPO 原来的 batch/更新数和回放恢复差异仍存在。',
+        '本次只重评测；SFT/GRPO/StepCredit 权重没有在 25 轮预算下重训，训练与评测预算不同。GRPO/StepCredit 原来的 batch/更新数和回放恢复差异仍存在。',
         '旧 16 轮结果是项目自设预算下的历史结果，不能称为官方 25 轮设置。本次只对齐官方轮次上限，不宣称完全复现官方所有推理设置。',
         '所有测试题重跑，未只延长曾失败的样本；固定 seed 也不保证不同调度下逐 bit 一致，因此预算变化对单题结果不必单调。',
-        '严格通过仍不等于完整业务语义正确。每个底层测试任务有五种扰动，实例之间相关；单 seed 结果不用于统计显著性宣称。','',f'GRPO/GiGPO 逐题配对：`{paired}`。','']
+        '严格通过仍不等于完整业务语义正确。每个底层测试任务有五种扰动，实例之间相关；单 seed 结果不用于统计显著性宣称。','',f'GRPO/StepCredit 逐题配对：`{paired}`。','']
     (report/'comparison.md').write_text('\n'.join(lines))
     fields=['id','trial','mode']+[n+'_'+m for n in loaded for m in ('official','strict','termination','decisions')]
     with (report/'paired_episodes.csv').open('w',newline='') as stream:

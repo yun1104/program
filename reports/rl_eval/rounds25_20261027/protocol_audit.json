@@ -10,7 +10,7 @@
     "base",
     "sft",
     "grpo",
-    "gigpo"
+    "step_credit"
   ],
   "test_tasks_per_model": 200,
   "fresh_model_task_pairs": 800,

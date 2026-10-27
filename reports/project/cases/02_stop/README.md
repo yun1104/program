@@ -4,17 +4,17 @@
 
 ## 观察与解释
 
-前置联系信息、库存预留和替代推荐已执行。order_items 持续返回 Feature Discontinued，GiGPO 最终停止，没有继续调用 push_alert 宣称排序已完成，并在回答中说明排序步骤不可用。
+前置联系信息、库存预留和替代推荐已执行。order_items 持续返回 Feature Discontinued，StepCredit 最终停止，没有继续调用 push_alert 宣称排序已完成，并在回答中说明排序步骤不可用。
 
 **可讲的结论：** Agent 的正确行为可以是承认无法完成，而非一律把所有工具调用完。
 
 **边界与反例：** 模型仍反复调用已明确永久失效的接口，停止策略不够节制；最终回答还手工列出了可能的排序，不能把官方通过理解为最优决策。所有预留与通知均为模拟工具。
 
-## GiGPO
+## StepCredit
 
 官方通过：`True`；严格通过：`True`；工具调用：9；协议错误：0；schema 错误：0；终止：`final_answer`。
 
-[完整原始快照](gigpo.json) · [运行原文件](../../../../runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/C1_task_041_P2_00.json)
+[完整原始快照](step_credit.json) · [运行原文件](../../../../runs/eval/qwen35_2b_step_credit_vllm_test_20261027/episodes/C1_task_041_P2_00.json)
 
 SHA-256：`6e820fa2f3b3d36023dbef80aa5d56bae9ea31031937c49f236da7f0d8927eff`
 

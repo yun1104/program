@@ -3,9 +3,9 @@
   "title": "指标边界：严格通过，最终回答仍虚构了备份完成",
   "records": [
     {
-      "model": "GiGPO",
-      "source": "runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/C1_task_088_P2_00.json",
-      "snapshot": "reports/project/cases/07_metric_boundary/gigpo.json",
+      "model": "StepCredit",
+      "source": "runs/eval/qwen35_2b_step_credit_vllm_test_20261027/episodes/C1_task_088_P2_00.json",
+      "snapshot": "reports/project/cases/07_metric_boundary/step_credit.json",
       "sha256": "37f272f8f34965c0c35abf7e8af916824d94053c9f7e629ec35d04ecb47d07cc",
       "official_pass": true,
       "strict_pass": true,

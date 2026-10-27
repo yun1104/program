@@ -12,7 +12,7 @@ models:
   config: scripts/toolmaze_agent/configs/grpo_eval_rounds25.yaml
   historical_16_run: runs/eval/qwen35_2b_grpo_vllm_test_20261027
   adapter: runs/grpo_lora_recovery_20261026/final
-- name: gigpo
-  config: scripts/toolmaze_agent/configs/gigpo_eval_rounds25.yaml
-  historical_16_run: runs/eval/qwen35_2b_gigpo_vllm_test_20261027
-  adapter: runs/gigpo_full_20261027/final
+- name: step_credit
+  config: scripts/toolmaze_agent/configs/step_credit_eval_rounds25.yaml
+  historical_16_run: runs/eval/qwen35_2b_step_credit_vllm_test_20261027
+  adapter: runs/step_credit_full_20261027/final

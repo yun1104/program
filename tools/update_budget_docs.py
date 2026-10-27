@@ -21,16 +21,16 @@ def main():
         if not progress.get('finished') or progress['completed']!=200:
             raise ValueError('Cannot publish incomplete results')
     labels={'base':'原始 Qwen3.5-2B','sft':'全参语言模型 SFT',
-            'grpo':'SFT + LoRA GRPO','gigpo':'SFT + LoRA GiGPO'}
+            'grpo':'SFT + LoRA GRPO','step_credit':'SFT + LoRA StepCredit'}
     table=['| 模型 | 官方通过 | 严格通过 | 含协议错误的轨迹 | 达到 25 轮上限 |',
            '|---|---:|---:|---:|---:|']
     for name,v in data['metrics'].items():
         behavior=data['behavior'][name]
         table.append(f"| {labels[name]} | {round(v['official_pass_rate']*200)}/200（{v['official_pass_rate']:.1%}） | {round(v['strict_pass_rate']*200)}/200（{v['strict_pass_rate']:.1%}） | {behavior['protocol_error_episodes']} | {behavior['terminations'].get('max_rounds',0)} |")
-    a,b,c=[data['metrics'][n] for n in ('sft','grpo','gigpo')]
+    a,b,c=[data['metrics'][n] for n in ('sft','grpo','step_credit')]
     finding=(f"25 轮主结果：GRPO 相对 SFT 的严格通过率变化为 {(b['strict_pass_rate']-a['strict_pass_rate'])*100:+.1f} 个百分点，"
-             f"GiGPO 相对 SFT 为 {(c['strict_pass_rate']-a['strict_pass_rate'])*100:+.1f} 个百分点。"
-             f"GiGPO 相对 GRPO：官方 {(c['official_pass_rate']-b['official_pass_rate'])*100:+.1f}、"
+             f"StepCredit 相对 SFT 为 {(c['strict_pass_rate']-a['strict_pass_rate'])*100:+.1f} 个百分点。"
+             f"StepCredit 相对 GRPO：官方 {(c['official_pass_rate']-b['official_pass_rate'])*100:+.1f}、"
              f"严格 {(c['strict_pass_rate']-b['strict_pass_rate'])*100:+.1f} 个百分点。"
              '两组训练 batch/更新数和恢复条件不同，且仅单 seed，不把该差异解释为纯算法因果效果。')
     p=ROOT/'README.md';s=p.read_text()
@@ -42,8 +42,8 @@ def main():
     s=s[:start]+finding+s[end:]
     s=s.replace('固定测试集 200 个任务实例，每题一次采样；使用最终权重，',
         '**主结果已按 25 轮预算重新测评**：固定测试集 200 个任务实例，每题一次采样；使用最终权重，',1)
-    s=s.replace('[完整评测对照表](reports/rl_eval/grpo_vs_gigpo_20261027/comparison.md) / [逐题 CSV](reports/rl_eval/grpo_vs_gigpo_20261027/paired_episodes.csv)',
-        '[25 轮完整对照与 16/25 变化](reports/rl_eval/rounds25_20261027/comparison.md) / [25 轮逐题 CSV](reports/rl_eval/rounds25_20261027/paired_episodes.csv) / [16 轮历史结果](reports/rl_eval/grpo_vs_gigpo_20261027/comparison.md)')
+    s=s.replace('[完整评测对照表](reports/rl_eval/grpo_vs_step_credit_20261027/comparison.md) / [逐题 CSV](reports/rl_eval/grpo_vs_step_credit_20261027/paired_episodes.csv)',
+        '[25 轮完整对照与 16/25 变化](reports/rl_eval/rounds25_20261027/comparison.md) / [25 轮逐题 CSV](reports/rl_eval/rounds25_20261027/paired_episodes.csv) / [16 轮历史结果](reports/rl_eval/grpo_vs_step_credit_20261027/comparison.md)')
     s=s.replace('[7 组代表性轨迹：成功、双向分歧、共同失败、指标盲区]',
         '[16 轮历史代表性轨迹：成功、双向分歧、共同失败、指标盲区]')
     s=s.replace('最多 16 轮，seed=20261026，无 JSON 强约束解码。两组 RL 各用 7 个单卡副本互斥分片，',
@@ -61,7 +61,7 @@ def main():
     addendum=['','## 25 轮预算更正后的主结果','',
         '官方配置采用 execution.max_rounds=25；此前 16 轮为项目自设预算，不能作为官方 25 轮设置报告。本次保留原权重，完整重跑四组各 200 题，没有只延长旧失败样本。','']
     current_pitch=(f"统一 25 轮预算、200 题单次评测下，严格通过率分别为：原模型 {data['metrics']['base']['strict_pass_rate']:.1%}，"
-                   f"SFT {a['strict_pass_rate']:.1%}，GRPO {b['strict_pass_rate']:.1%}，GiGPO {c['strict_pass_rate']:.1%}。"
+                   f"SFT {a['strict_pass_rate']:.1%}，GRPO {b['strict_pass_rate']:.1%}，StepCredit {c['strict_pass_rate']:.1%}。"
                    '介绍项目时使用这一组新数字；不要把下文 16 轮历史数字与新结果混用。')
     addendum+=table+['',finding,'',current_pitch,'',
         '本次其余生成参数、数据及 judge 保持一致；25 是模型决策次数，包含最终回答和非法动作。8192 上下文仍可能导致提前结束。训练/教师采集仍是原 16 轮预算，未重训；单动作 JSON 协议也不同于官方可并行原生工具接口。',

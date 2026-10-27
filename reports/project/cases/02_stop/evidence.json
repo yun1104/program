@@ -3,9 +3,9 @@
   "title": "永久性错误：停止下游通知，解释部分完成",
   "records": [
     {
-      "model": "GiGPO",
-      "source": "runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/C1_task_041_P2_00.json",
-      "snapshot": "reports/project/cases/02_stop/gigpo.json",
+      "model": "StepCredit",
+      "source": "runs/eval/qwen35_2b_step_credit_vllm_test_20261027/episodes/C1_task_041_P2_00.json",
+      "snapshot": "reports/project/cases/02_stop/step_credit.json",
       "sha256": "6e820fa2f3b3d36023dbef80aa5d56bae9ea31031937c49f236da7f0d8927eff",
       "official_pass": true,
       "strict_pass": true,

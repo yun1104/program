@@ -28,7 +28,7 @@ __pycache__/
 /reports/*.log
 /reports/**/sources/
 !/reports/rl_recovery_tests_final.log
-!/reports/gigpo/gigpo_full_20261027/unit_tests.log
+!/reports/step_credit/step_credit_full_20261027/unit_tests.log
 /reports/rl/*/
 
 # Reproducibility evidence only. No checkpoints or training rollout dumps.
@@ -43,18 +43,18 @@ __pycache__/
 !/runs/grpo_lora_recovery_20261026/progress.json
 !/runs/grpo_lora_recovery_20261026/training_metrics.json
 !/runs/grpo_lora_recovery_20261026/adapter_progress.json
-!/runs/gigpo_full_20261027/
-!/runs/gigpo_full_20261027/manifest.json
-!/runs/gigpo_full_20261027/progress.json
-!/runs/gigpo_full_20261027/training_metrics.json
-!/runs/gigpo_full_20261027/adapter_progress.json
+!/runs/step_credit_full_20261027/
+!/runs/step_credit_full_20261027/manifest.json
+!/runs/step_credit_full_20261027/progress.json
+!/runs/step_credit_full_20261027/training_metrics.json
+!/runs/step_credit_full_20261027/adapter_progress.json
 !/runs/sft_data/
 !/runs/sft_data/manifest.json
 !/runs/teacher/
 !/runs/teacher/opencode_v41_flash_20261026_native_v2/
 !/runs/teacher/opencode_v41_flash_20261026_native_v2/progress.json
-!/runs/gigpo_full_20261027/advantages/
-!/runs/gigpo_full_20261027/advantages/*.json
+!/runs/step_credit_full_20261027/advantages/
+!/runs/step_credit_full_20261027/advantages/*.json
 !/runs/eval/
 !/runs/eval/qwen35_2b_base_vllm_test_20261026/
 !/runs/eval/qwen35_2b_base_vllm_test_20261026/manifest.json
@@ -77,13 +77,13 @@ __pycache__/
 !/runs/eval/qwen35_2b_grpo_vllm_test_20261027/parallel_execution.json
 !/runs/eval/qwen35_2b_grpo_vllm_test_20261027/episodes/
 !/runs/eval/qwen35_2b_grpo_vllm_test_20261027/episodes/*.json
-!/runs/eval/qwen35_2b_gigpo_vllm_test_20261027/
-!/runs/eval/qwen35_2b_gigpo_vllm_test_20261027/manifest.json
-!/runs/eval/qwen35_2b_gigpo_vllm_test_20261027/summary.json
-!/runs/eval/qwen35_2b_gigpo_vllm_test_20261027/progress.json
-!/runs/eval/qwen35_2b_gigpo_vllm_test_20261027/parallel_execution.json
-!/runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/
-!/runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/*.json
+!/runs/eval/qwen35_2b_step_credit_vllm_test_20261027/
+!/runs/eval/qwen35_2b_step_credit_vllm_test_20261027/manifest.json
+!/runs/eval/qwen35_2b_step_credit_vllm_test_20261027/summary.json
+!/runs/eval/qwen35_2b_step_credit_vllm_test_20261027/progress.json
+!/runs/eval/qwen35_2b_step_credit_vllm_test_20261027/parallel_execution.json
+!/runs/eval/qwen35_2b_step_credit_vllm_test_20261027/episodes/
+!/runs/eval/qwen35_2b_step_credit_vllm_test_20261027/episodes/*.json
 
 # 25-round rerun evidence (historical 16-round results remain above).
 !/reports/rl_eval/rounds25_20261027/budget_tests.log
@@ -108,10 +108,10 @@ __pycache__/
 !/runs/eval/qwen35_2b_grpo_vllm_test_rounds25_20261027/parallel_execution.json
 !/runs/eval/qwen35_2b_grpo_vllm_test_rounds25_20261027/episodes/
 !/runs/eval/qwen35_2b_grpo_vllm_test_rounds25_20261027/episodes/*.json
-!/runs/eval/qwen35_2b_gigpo_vllm_test_rounds25_20261027/
-!/runs/eval/qwen35_2b_gigpo_vllm_test_rounds25_20261027/manifest.json
-!/runs/eval/qwen35_2b_gigpo_vllm_test_rounds25_20261027/summary.json
-!/runs/eval/qwen35_2b_gigpo_vllm_test_rounds25_20261027/progress.json
-!/runs/eval/qwen35_2b_gigpo_vllm_test_rounds25_20261027/parallel_execution.json
-!/runs/eval/qwen35_2b_gigpo_vllm_test_rounds25_20261027/episodes/
-!/runs/eval/qwen35_2b_gigpo_vllm_test_rounds25_20261027/episodes/*.json
+!/runs/eval/qwen35_2b_step_credit_vllm_test_rounds25_20261027/
+!/runs/eval/qwen35_2b_step_credit_vllm_test_rounds25_20261027/manifest.json
+!/runs/eval/qwen35_2b_step_credit_vllm_test_rounds25_20261027/summary.json
+!/runs/eval/qwen35_2b_step_credit_vllm_test_rounds25_20261027/progress.json
+!/runs/eval/qwen35_2b_step_credit_vllm_test_rounds25_20261027/parallel_execution.json
+!/runs/eval/qwen35_2b_step_credit_vllm_test_rounds25_20261027/episodes/
+!/runs/eval/qwen35_2b_step_credit_vllm_test_rounds25_20261027/episodes/*.json

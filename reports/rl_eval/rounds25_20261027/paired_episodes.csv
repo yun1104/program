@@ -1,4 +1,4 @@
-id,trial,mode,base_official,base_strict,base_termination,base_decisions,sft_official,sft_strict,sft_termination,sft_decisions,grpo_official,grpo_strict,grpo_termination,grpo_decisions,gigpo_official,gigpo_strict,gigpo_termination,gigpo_decisions
+id,trial,mode,base_official,base_strict,base_termination,base_decisions,sft_official,sft_strict,sft_termination,sft_decisions,grpo_official,grpo_strict,grpo_termination,grpo_decisions,step_credit_official,step_credit_strict,step_credit_termination,step_credit_decisions
 C1_task_008:P0,0,P0,True,True,final_answer,6,True,True,final_answer,6,True,True,final_answer,6,True,True,final_answer,6
 C1_task_008:P1,0,P1,False,False,final_answer,5,True,True,final_answer,7,True,True,final_answer,8,True,True,final_answer,7
 C1_task_008:P2,0,P2,False,False,final_answer,6,False,False,final_answer,7,False,False,final_answer,8,False,False,final_answer,8

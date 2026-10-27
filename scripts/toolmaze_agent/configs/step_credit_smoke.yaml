@@ -1,0 +1,60 @@
+seed: 20261026
+project_config: scripts/toolmaze_agent/configs/project.yaml
+model: runs/sft_full_trl_20261026/final
+output: runs/step_credit_smoke_20261026
+task_ids: [C3_task_015:P0, C3_task_015:P1]
+lora:
+  r: 64
+  lora_alpha: 128
+  lora_dropout: 0.0
+  bias: none
+step_credit:
+  gamma: 0.95
+  omega: 1.0
+  head_chunk_tokens: 64
+generation:
+  max_tokens: 512
+  max_context_tokens: 8192
+  temperature: 0.8
+training:
+  max_steps: 3
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 4
+  steps_per_generation: 4
+  num_generations: 4
+  learning_rate: 1.0e-5
+  warmup_steps: 0
+  lr_scheduler_type: constant
+  beta: 0.01
+  temperature: 0.8
+  top_p: 1.0
+  top_k: 0
+  max_completion_length: 8192
+  num_iterations: 1
+  loss_type: grpo
+  scale_rewards: group
+  bf16: true
+  tf32: true
+  gradient_checkpointing: true
+  gradient_checkpointing_kwargs:
+    use_reentrant: false
+  max_grad_norm: 1.0
+  logging_steps: 1
+  save_steps: 1
+  save_total_limit: 2
+  save_only_model: false
+  report_to: none
+  optim: adamw_torch_fused
+  use_liger_kernel: true
+  use_vllm: true
+  vllm_mode: colocate
+  vllm_enable_sleep_mode: true
+  vllm_gpu_memory_utilization: 0.4
+  vllm_max_model_length: 8192
+  vllm_importance_sampling_correction: true
+  vllm_importance_sampling_mode: token_truncate
+  vllm_importance_sampling_clip_max: 2.0
+  mask_truncated_completions: false
+  remove_unused_columns: false
+  ddp_find_unused_parameters: false
+  deepspeed: scripts/toolmaze_agent/configs/zero2_gpu.json
