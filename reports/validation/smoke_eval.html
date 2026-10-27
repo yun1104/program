@@ -1,0 +1,97 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>ToolMaze 实验比较</title>
+<style>body{font:15px system-ui;max-width:1400px;margin:40px auto;padding:0 20px}table{border-collapse:collapse;width:100%}th,td{padding:8px;border:1px solid #ddd;text-align:left}th{background:#eef3f8}pre{white-space:pre-wrap}tr:nth-child(even){background:#fafafa}</style>
+<h1>ToolMaze 实验比较</h1><p>官方通过率与额外严格检查分别报告。基础设施错误仍计入分母。结果仅说明受控模拟环境中的表现。</p>
+<table><thead><tr><th>实验</th><th>切片</th><th>样本数</th><th>官方通过率</th><th>严格通过率</th><th>工具调用</th><th>Tokens</th><th>基础设施错误</th></tr></thead><tbody><tr><td>runs/cli_smoke/eval</td><td>all</td><td>2</td><td>0.0%</td><td>0.0%</td><td>0.00</td><td>3159</td><td>0</td></tr><tr><td>runs/cli_smoke/eval</td><td>cell/C1/P0</td><td>1</td><td>0.0%</td><td>0.0%</td><td>0.00</td><td>3159</td><td>0</td></tr><tr><td>runs/cli_smoke/eval</td><td>cell/C1/P1</td><td>1</td><td>0.0%</td><td>0.0%</td><td>0.00</td><td>3159</td><td>0</td></tr><tr><td>runs/cli_smoke/eval</td><td>complexity/C1</td><td>2</td><td>0.0%</td><td>0.0%</td><td>0.00</td><td>3159</td><td>0</td></tr><tr><td>runs/cli_smoke/eval</td><td>mode/P0</td><td>1</td><td>0.0%</td><td>0.0%</td><td>0.00</td><td>3159</td><td>0</td></tr><tr><td>runs/cli_smoke/eval</td><td>mode/P1</td><td>1</td><td>0.0%</td><td>0.0%</td><td>0.00</td><td>3159</td><td>0</td></tr></tbody></table><h2>runs/cli_smoke/eval</h2><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-26T13:10:13.604129&quot;,
+  &quot;total_tasks&quot;: 2,
+  &quot;tsr&quot;: {
+    &quot;P0&quot;: 0.0,
+    &quot;P1&quot;: 0.0,
+    &quot;P2&quot;: 0.0,
+    &quot;P3&quot;: 0.0,
+    &quot;P4&quot;: 0.0
+  },
+  &quot;prr&quot;: {
+    &quot;P1&quot;: null,
+    &quot;P2&quot;: null,
+    &quot;P3&quot;: null,
+    &quot;P4&quot;: null
+  },
+  &quot;rc&quot;: {
+    &quot;P1&quot;: null,
+    &quot;P2&quot;: null,
+    &quot;P3&quot;: null,
+    &quot;P4&quot;: null
+  },
+  &quot;insights&quot;: {
+    &quot;p1_no_hits&quot;: &quot;P1 recorded no fault hits, so PRR is unavailable and RC reflects zero observed recovery cost&quot;
+  },
+  &quot;mode_breakdown&quot;: {
+    &quot;P0&quot;: {
+      &quot;total&quot;: 1,
+      &quot;passed&quot;: 0,
+      &quot;failed&quot;: 1,
+      &quot;avg_tokens&quot;: 3159.0,
+      &quot;min_tokens&quot;: 3159,
+      &quot;max_tokens&quot;: 3159
+    },
+    &quot;P1&quot;: {
+      &quot;total&quot;: 1,
+      &quot;passed&quot;: 0,
+      &quot;failed&quot;: 1,
+      &quot;avg_tokens&quot;: 3159.0,
+      &quot;min_tokens&quot;: 3159,
+      &quot;max_tokens&quot;: 3159
+    }
+  },
+  &quot;recovery_breakdown&quot;: {
+    &quot;P1&quot;: {
+      &quot;total&quot;: 1,
+      &quot;hit_count&quot;: 0,
+      &quot;no_hit_count&quot;: 1,
+      &quot;hit_pass_count&quot;: 0,
+      &quot;hit_fail_count&quot;: 0,
+      &quot;prr_denominator&quot;: 0,
+      &quot;prr_numerator&quot;: 0,
+      &quot;rc_sample_count&quot;: 0,
+      &quot;avg_actual_recovery_calls&quot;: null,
+      &quot;avg_oracle_recovery_calls&quot;: null
+    },
+    &quot;P2&quot;: {
+      &quot;total&quot;: 0,
+      &quot;hit_count&quot;: 0,
+      &quot;no_hit_count&quot;: 0,
+      &quot;hit_pass_count&quot;: 0,
+      &quot;hit_fail_count&quot;: 0,
+      &quot;prr_denominator&quot;: 0,
+      &quot;prr_numerator&quot;: 0,
+      &quot;rc_sample_count&quot;: 0,
+      &quot;avg_actual_recovery_calls&quot;: null,
+      &quot;avg_oracle_recovery_calls&quot;: null
+    },
+    &quot;P3&quot;: {
+      &quot;total&quot;: 0,
+      &quot;hit_count&quot;: 0,
+      &quot;no_hit_count&quot;: 0,
+      &quot;hit_pass_count&quot;: 0,
+      &quot;hit_fail_count&quot;: 0,
+      &quot;prr_denominator&quot;: 0,
+      &quot;prr_numerator&quot;: 0,
+      &quot;rc_sample_count&quot;: 0,
+      &quot;avg_actual_recovery_calls&quot;: null,
+      &quot;avg_oracle_recovery_calls&quot;: null
+    },
+    &quot;P4&quot;: {
+      &quot;total&quot;: 0,
+      &quot;hit_count&quot;: 0,
+      &quot;no_hit_count&quot;: 0,
+      &quot;hit_pass_count&quot;: 0,
+      &quot;hit_fail_count&quot;: 0,
+      &quot;prr_denominator&quot;: 0,
+      &quot;prr_numerator&quot;: 0,
+      &quot;rc_sample_count&quot;: 0,
+      &quot;avg_actual_recovery_calls&quot;: null,
+      &quot;avg_oracle_recovery_calls&quot;: null
+    }
+  }
+}</pre></html>

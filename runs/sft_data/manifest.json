@@ -1,0 +1,23 @@
+{
+  "collection_identity": "c13906cfd89648460a3ad12ec4c21046a05b8c460c3555e9ed831e8aa211236b",
+  "split_sha256": "7e36f9f16df3e82e2edcd6d89cc9b5e9c5a69689c64828f500612b04c7d3d133",
+  "modes": [
+    "P0",
+    "P1",
+    "P2",
+    "P3",
+    "P4"
+  ],
+  "accepted": 782,
+  "rejected": {
+    "not_strict_pass": 818
+  },
+  "cells": {
+    "P0": 226,
+    "P1": 234,
+    "P3": 125,
+    "P2": 119,
+    "P4": 78
+  },
+  "train_sha256": "b26f624555968e4d6aafd951bf226f3675ab75866b3178f76253b8e14ce369a6"
+}

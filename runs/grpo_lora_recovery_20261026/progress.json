@@ -1,0 +1,14 @@
+{
+  "state": "complete",
+  "step": 100,
+  "total_steps": 100,
+  "metrics": {
+    "train_runtime": 24171.3251,
+    "train_samples_per_second": 0.53,
+    "train_steps_per_second": 0.004,
+    "total_flos": 0.0,
+    "train_loss": 7.619709769642214e-05,
+    "epoch": 1.0
+  },
+  "adapter": "/home/ruanwenxuan/program/runs/grpo_lora_recovery_20261026/final"
+}

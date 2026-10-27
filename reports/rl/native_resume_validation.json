@@ -1,0 +1,14 @@
+{
+  "checkpoint": "/home/ruanwenxuan/program/runs/grpo_lora_recovery_20261026/checkpoint-2",
+  "expected_step": 2,
+  "expected_lora_b_l2": 0.008541394025087357,
+  "started_at_unix": 1793014856.7635372,
+  "native_resume_loaded": true,
+  "restored_step": 2,
+  "restored_lora_b_l2": 0.008541394025087357,
+  "verified_at_unix": 1793015342.6363146,
+  "next_optimizer_step_completed": 3,
+  "lora_b_l2_after_resume": 0.021182799711823463,
+  "checkpoint_3_complete": true,
+  "checkpoint_3_bytes": 1097034975
+}

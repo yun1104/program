@@ -1,0 +1,15 @@
+{
+  "pid": 2469539,
+  "command": [
+    "/home/ruanwenxuan/miniconda3/envs/sftrl/bin/python",
+    "tools/run_rl.py",
+    "--gpus",
+    "0,3,5,6",
+    "--sampler-gpu",
+    "7",
+    "--config",
+    "scripts/toolmaze_agent/configs/rl_lora_recovery.yaml"
+  ],
+  "started_at_unix": 1793014259.1032722,
+  "recovery": "Reconstruct first 10 updates from all recorded student trajectories, then fresh online generation; not an exact checkpoint resume."
+}

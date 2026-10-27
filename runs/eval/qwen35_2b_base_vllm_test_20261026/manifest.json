@@ -1,0 +1,799 @@
+{
+  "config": {
+    "project_config": "scripts/toolmaze_agent/configs/project.yaml",
+    "split": "test",
+    "trials": 1,
+    "seed": 20261026,
+    "output": "runs/eval/qwen35_2b_base_vllm_test_20261026",
+    "backend": "vllm",
+    "model": "models/Qwen3.5-2B",
+    "model_manifest": "artifacts/qwen35_2b_baseline_model.json",
+    "dtype": "bfloat16",
+    "workers": 64,
+    "generation": {
+      "temperature": 0.8,
+      "max_tokens": 512,
+      "max_context_tokens": 8192
+    },
+    "vllm": {
+      "tensor_parallel_size": 1,
+      "gpu_memory_utilization": 0.9,
+      "enforce_eager": false,
+      "max_num_seqs": 64,
+      "max_num_batched_tokens": 16384,
+      "continuous_batching": true,
+      "schema_cache": true,
+      "compilation_config": {
+        "mode": 0,
+        "cudagraph_mode": "FULL_DECODE_ONLY",
+        "cudagraph_capture_sizes": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          24,
+          32,
+          40,
+          48,
+          64
+        ]
+      }
+    }
+  },
+  "packages": {
+    "torch": "2.13.0+cu130",
+    "transformers": "5.10.4",
+    "trl": "1.13.0",
+    "accelerate": "1.15.0",
+    "openai": "3.17.0",
+    "datasets": "5.0.1",
+    "vllm": "0.29.0"
+  },
+  "source_sha256": {
+    "scripts/toolmaze_agent/__init__.py": "be43fcdd1a4b48644bef2a9d525b2e12cdd3f54efa093538b786d800483d173f",
+    "scripts/toolmaze_agent/build_sft.py": "d68099cf4ebeec6c14c5fef086d3a5c2b678f2291c7480f84472bfc7dfc82052",
+    "scripts/toolmaze_agent/collect.py": "947565cc4463712a8be777c9d32f45a29707f2195476924457d1c2f797f76a34",
+    "scripts/toolmaze_agent/common.py": "5ba318d357413bca30e0ace76a047a85dad65d4ba31b81ec9342372a71dba940",
+    "scripts/toolmaze_agent/environment.py": "5b50cb43afd4bf9530b14dfb5f5b18453fa5985110cc1b08142edafc31c17f26",
+    "scripts/toolmaze_agent/eval.py": "bbf17d2292485ea2187d6ba5dbb00c699b80ac71a996cad2d29bc56b5e8a8a31",
+    "scripts/toolmaze_agent/policy.py": "77426eaade701ab7af9222f94ed0366a95ab7abb9e13c01e1b0e0fa537d8d53d",
+    "scripts/toolmaze_agent/prepare.py": "8a1e7323ef7c4c813ece4d7ff52527493c730424fe2b729e1596eddc667c6405",
+    "scripts/toolmaze_agent/protocol.py": "df716955072f6926a42b5ca843279ca8c3bd7f2d29b8b49931b559fea6934993",
+    "scripts/toolmaze_agent/report.py": "8c03e0ce592ad3decaa34ed2fc5609f1006c06a0bc415814c2051c93e91298c8",
+    "scripts/toolmaze_agent/rollout.py": "558441c58bfaada96f3c303500b00d8c28e0be36aa5673b64654bf29cee8c2a3",
+    "scripts/toolmaze_agent/tool_schema_cache.py": "37a813ba566b43d0ce09c40e3f31a767897eb50e1a9068a649e0ec3a870d85ef",
+    "scripts/toolmaze_agent/train_rl.py": "cfdbff525cf7981aa54854bdb1a781a8dfc128703a3c60312176afd49736e71a",
+    "scripts/toolmaze_agent/train_sft.py": "8eafdaa1c76eb15fefab21427cd4b89e4b98b5c8dd083a7c9eaa48a8fb564f9e",
+    "scripts/toolmaze_agent/vllm_backend.py": "cf0cdd241c45a478286b5e4fab9b36876cc3dea8ba50761f9d20be90505896a8"
+  },
+  "toolmaze_commit": "f8620d841b67a72ac921caee9df87af6ab9befbb",
+  "project_config": {
+    "seed": 20261026,
+    "upstream": "tools/ToolMaze",
+    "tasks": "data/toolmaze/perturbed_tasks",
+    "templates": "data/toolmaze/templates",
+    "splits": "data/splits/toolmaze_v1",
+    "split_ratios": [
+      0.8,
+      0.1,
+      0.1
+    ],
+    "max_rounds": 16,
+    "call_penalty": 0.002,
+    "teacher": {
+      "model": "deepseek-flash",
+      "base_url": "https://api.deepseek.com",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.8,
+      "max_tokens": 1024,
+      "timeout": 120,
+      "max_retries": 2,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        }
+      }
+    },
+    "judge": {
+      "model": "deepseek-flash"
+    }
+  },
+  "split_sha256": "02194d5d54c1c35ad127920c6a9a793eb8f1240a3d98c7dcc13e0128c1db4e06",
+  "requested_ids": [
+    "C1_task_008:P0",
+    "C1_task_008:P1",
+    "C1_task_008:P2",
+    "C1_task_008:P3",
+    "C1_task_008:P4",
+    "C3_task_011:P0",
+    "C3_task_011:P1",
+    "C3_task_011:P2",
+    "C3_task_011:P3",
+    "C3_task_011:P4",
+    "C2_task_051:P0",
+    "C2_task_051:P1",
+    "C2_task_051:P2",
+    "C2_task_051:P3",
+    "C2_task_051:P4",
+    "C1_task_023:P0",
+    "C1_task_023:P1",
+    "C1_task_023:P2",
+    "C1_task_023:P3",
+    "C1_task_023:P4",
+    "C3_task_007:P0",
+    "C3_task_007:P1",
+    "C3_task_007:P2",
+    "C3_task_007:P3",
+    "C3_task_007:P4",
+    "C3_task_037:P0",
+    "C3_task_037:P1",
+    "C3_task_037:P2",
+    "C3_task_037:P3",
+    "C3_task_037:P4",
+    "C1_task_096:P0",
+    "C1_task_096:P1",
+    "C1_task_096:P2",
+    "C1_task_096:P3",
+    "C1_task_096:P4",
+    "C2_task_066:P0",
+    "C2_task_066:P1",
+    "C2_task_066:P2",
+    "C2_task_066:P3",
+    "C2_task_066:P4",
+    "C4_task_025:P0",
+    "C4_task_025:P1",
+    "C4_task_025:P2",
+    "C4_task_025:P3",
+    "C4_task_025:P4",
+    "C2_task_062:P0",
+    "C2_task_062:P1",
+    "C2_task_062:P2",
+    "C2_task_062:P3",
+    "C2_task_062:P4",
+    "C2_task_100:P0",
+    "C2_task_100:P1",
+    "C2_task_100:P2",
+    "C2_task_100:P3",
+    "C2_task_100:P4",
+    "C3_task_080:P0",
+    "C3_task_080:P1",
+    "C3_task_080:P2",
+    "C3_task_080:P3",
+    "C3_task_080:P4",
+    "C3_task_097:P0",
+    "C3_task_097:P1",
+    "C3_task_097:P2",
+    "C3_task_097:P3",
+    "C3_task_097:P4",
+    "C1_task_048:P0",
+    "C1_task_048:P1",
+    "C1_task_048:P2",
+    "C1_task_048:P3",
+    "C1_task_048:P4",
+    "C1_task_089:P0",
+    "C1_task_089:P1",
+    "C1_task_089:P2",
+    "C1_task_089:P3",
+    "C1_task_089:P4",
+    "C4_task_047:P0",
+    "C4_task_047:P1",
+    "C4_task_047:P2",
+    "C4_task_047:P3",
+    "C4_task_047:P4",
+    "C1_task_035:P0",
+    "C1_task_035:P1",
+    "C1_task_035:P2",
+    "C1_task_035:P3",
+    "C1_task_035:P4",
+    "C2_task_033:P0",
+    "C2_task_033:P1",
+    "C2_task_033:P2",
+    "C2_task_033:P3",
+    "C2_task_033:P4",
+    "C3_task_070:P0",
+    "C3_task_070:P1",
+    "C3_task_070:P2",
+    "C3_task_070:P3",
+    "C3_task_070:P4",
+    "C2_task_070:P0",
+    "C2_task_070:P1",
+    "C2_task_070:P2",
+    "C2_task_070:P3",
+    "C2_task_070:P4",
+    "C2_task_013:P0",
+    "C2_task_013:P1",
+    "C2_task_013:P2",
+    "C2_task_013:P3",
+    "C2_task_013:P4",
+    "C3_task_066:P0",
+    "C3_task_066:P1",
+    "C3_task_066:P2",
+    "C3_task_066:P3",
+    "C3_task_066:P4",
+    "C4_task_084:P0",
+    "C4_task_084:P1",
+    "C4_task_084:P2",
+    "C4_task_084:P3",
+    "C4_task_084:P4",
+    "C1_task_054:P0",
+    "C1_task_054:P1",
+    "C1_task_054:P2",
+    "C1_task_054:P3",
+    "C1_task_054:P4",
+    "C4_task_033:P0",
+    "C4_task_033:P1",
+    "C4_task_033:P2",
+    "C4_task_033:P3",
+    "C4_task_033:P4",
+    "C4_task_017:P0",
+    "C4_task_017:P1",
+    "C4_task_017:P2",
+    "C4_task_017:P3",
+    "C4_task_017:P4",
+    "C4_task_056:P0",
+    "C4_task_056:P1",
+    "C4_task_056:P2",
+    "C4_task_056:P3",
+    "C4_task_056:P4",
+    "C4_task_034:P0",
+    "C4_task_034:P1",
+    "C4_task_034:P2",
+    "C4_task_034:P3",
+    "C4_task_034:P4",
+    "C2_task_002:P0",
+    "C2_task_002:P1",
+    "C2_task_002:P2",
+    "C2_task_002:P3",
+    "C2_task_002:P4",
+    "C3_task_088:P0",
+    "C3_task_088:P1",
+    "C3_task_088:P2",
+    "C3_task_088:P3",
+    "C3_task_088:P4",
+    "C2_task_056:P0",
+    "C2_task_056:P1",
+    "C2_task_056:P2",
+    "C2_task_056:P3",
+    "C2_task_056:P4",
+    "C1_task_041:P0",
+    "C1_task_041:P1",
+    "C1_task_041:P2",
+    "C1_task_041:P3",
+    "C1_task_041:P4",
+    "C1_task_088:P0",
+    "C1_task_088:P1",
+    "C1_task_088:P2",
+    "C1_task_088:P3",
+    "C1_task_088:P4",
+    "C3_task_094:P0",
+    "C3_task_094:P1",
+    "C3_task_094:P2",
+    "C3_task_094:P3",
+    "C3_task_094:P4",
+    "C4_task_063:P0",
+    "C4_task_063:P1",
+    "C4_task_063:P2",
+    "C4_task_063:P3",
+    "C4_task_063:P4",
+    "C4_task_070:P0",
+    "C4_task_070:P1",
+    "C4_task_070:P2",
+    "C4_task_070:P3",
+    "C4_task_070:P4",
+    "C2_task_029:P0",
+    "C2_task_029:P1",
+    "C2_task_029:P2",
+    "C2_task_029:P3",
+    "C2_task_029:P4",
+    "C4_task_087:P0",
+    "C4_task_087:P1",
+    "C4_task_087:P2",
+    "C4_task_087:P3",
+    "C4_task_087:P4",
+    "C1_task_093:P0",
+    "C1_task_093:P1",
+    "C1_task_093:P2",
+    "C1_task_093:P3",
+    "C1_task_093:P4",
+    "C3_task_049:P0",
+    "C3_task_049:P1",
+    "C3_task_049:P2",
+    "C3_task_049:P3",
+    "C3_task_049:P4"
+  ],
+  "domain": null,
+  "model_snapshot": {
+    "repo": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "actual_path": "/home/ruanwenxuan/.cache/modelscope/models/Qwen--Qwen3.5-2B/snapshots/master",
+    "weights": {
+      "model.safetensors-00001-of-00001.safetensors": {
+        "bytes": 4548221488,
+        "sha256": "aa33250c4fc64891ddfaba3a314fd9542ea371843c387178b425fbcc5ed680b1"
+      }
+    },
+    "metadata_sha256": {
+      "config.json": "ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4",
+      "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "tokenizer_config.json": "49e2b6e395f959f077f1e992b338919c0d4a9732fc6e613995e06557f843500c",
+      "chat_template.jinja": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80"
+    }
+  },
+  "runtime_environment": {
+    "CUDA_VISIBLE_DEVICES": [
+      "0",
+      "3",
+      "5",
+      "6",
+      "7"
+    ]
+  },
+  "partitions": [
+    {
+      "gpu": "0",
+      "identity": "08d554c3d1ef64b916e8611868001b7b1923e41a90b79c1100f74b88f9754db2",
+      "requested_ids": [
+        "C1_task_054:P2",
+        "C3_task_066:P0",
+        "C1_task_048:P0",
+        "C3_task_070:P4",
+        "C2_task_056:P2",
+        "C1_task_089:P0",
+        "C2_task_033:P0",
+        "C4_task_084:P1",
+        "C1_task_089:P1",
+        "C3_task_097:P3",
+        "C2_task_013:P3",
+        "C4_task_033:P0",
+        "C2_task_056:P3",
+        "C1_task_035:P1",
+        "C4_task_034:P0",
+        "C1_task_041:P4",
+        "C1_task_041:P3",
+        "C4_task_025:P1",
+        "C2_task_100:P2",
+        "C4_task_047:P0",
+        "C4_task_047:P3",
+        "C3_task_037:P3",
+        "C3_task_088:P2",
+        "C1_task_096:P2",
+        "C3_task_088:P4",
+        "C4_task_033:P3",
+        "C3_task_088:P1",
+        "C2_task_033:P2",
+        "C2_task_062:P4",
+        "C4_task_056:P3",
+        "C2_task_051:P1",
+        "C4_task_017:P2",
+        "C3_task_097:P4",
+        "C2_task_013:P2",
+        "C1_task_088:P2",
+        "C2_task_013:P1",
+        "C1_task_023:P2",
+        "C1_task_093:P4",
+        "C1_task_093:P1",
+        "C4_task_056:P4"
+      ]
+    },
+    {
+      "gpu": "3",
+      "identity": "9de7a832452d036bb328b4225607653fccb731d2d7240fb2c93c8484f78312bd",
+      "requested_ids": [
+        "C4_task_033:P4",
+        "C3_task_049:P0",
+        "C3_task_080:P4",
+        "C4_task_084:P4",
+        "C2_task_062:P0",
+        "C2_task_100:P3",
+        "C4_task_084:P3",
+        "C1_task_088:P3",
+        "C3_task_066:P1",
+        "C3_task_007:P1",
+        "C2_task_100:P0",
+        "C1_task_089:P4",
+        "C2_task_066:P4",
+        "C4_task_033:P1",
+        "C4_task_017:P3",
+        "C4_task_056:P2",
+        "C4_task_017:P0",
+        "C2_task_056:P0",
+        "C2_task_066:P0",
+        "C1_task_041:P0",
+        "C2_task_002:P0",
+        "C3_task_037:P1",
+        "C3_task_094:P2",
+        "C1_task_008:P1",
+        "C4_task_025:P2",
+        "C2_task_002:P4",
+        "C4_task_063:P2",
+        "C3_task_011:P3",
+        "C1_task_008:P3",
+        "C1_task_023:P1",
+        "C2_task_029:P1",
+        "C2_task_029:P4",
+        "C2_task_066:P1",
+        "C2_task_002:P1",
+        "C4_task_087:P2",
+        "C2_task_070:P3",
+        "C2_task_033:P1",
+        "C3_task_049:P3",
+        "C1_task_035:P3",
+        "C1_task_035:P0"
+      ]
+    },
+    {
+      "gpu": "5",
+      "identity": "bad20ed60a6bf1a604033fef0b494fe811d60b1f3782d9c8ffa2c338c311cb29",
+      "requested_ids": [
+        "C4_task_034:P2",
+        "C3_task_007:P2",
+        "C3_task_088:P3",
+        "C2_task_056:P4",
+        "C1_task_008:P0",
+        "C3_task_037:P0",
+        "C3_task_066:P4",
+        "C2_task_051:P0",
+        "C1_task_096:P3",
+        "C2_task_062:P2",
+        "C4_task_063:P1",
+        "C2_task_051:P4",
+        "C2_task_002:P2",
+        "C2_task_056:P1",
+        "C1_task_041:P2",
+        "C2_task_033:P3",
+        "C1_task_048:P1",
+        "C3_task_080:P1",
+        "C4_task_084:P2",
+        "C4_task_025:P4",
+        "C4_task_087:P3",
+        "C4_task_063:P3",
+        "C4_task_070:P2",
+        "C1_task_048:P2",
+        "C2_task_051:P3",
+        "C3_task_049:P1",
+        "C4_task_017:P1",
+        "C3_task_011:P2",
+        "C3_task_037:P2",
+        "C1_task_048:P3",
+        "C1_task_089:P2",
+        "C3_task_007:P4",
+        "C4_task_033:P2",
+        "C2_task_002:P3",
+        "C3_task_094:P0",
+        "C2_task_070:P2",
+        "C1_task_093:P2",
+        "C4_task_034:P1",
+        "C2_task_029:P0",
+        "C3_task_080:P0"
+      ]
+    },
+    {
+      "gpu": "6",
+      "identity": "4d22d85a79a51859955696c8525e94c1677ce042d7105ce45e7d91acf5b068ba",
+      "requested_ids": [
+        "C1_task_089:P3",
+        "C1_task_035:P4",
+        "C4_task_063:P0",
+        "C2_task_066:P2",
+        "C3_task_066:P2",
+        "C3_task_070:P1",
+        "C3_task_070:P3",
+        "C4_task_025:P0",
+        "C4_task_063:P4",
+        "C2_task_062:P1",
+        "C2_task_066:P3",
+        "C1_task_054:P3",
+        "C4_task_070:P4",
+        "C4_task_084:P0",
+        "C3_task_094:P4",
+        "C3_task_080:P2",
+        "C2_task_062:P3",
+        "C4_task_047:P2",
+        "C4_task_056:P1",
+        "C2_task_029:P2",
+        "C2_task_070:P0",
+        "C2_task_013:P0",
+        "C3_task_097:P1",
+        "C2_task_013:P4",
+        "C4_task_047:P4",
+        "C3_task_097:P0",
+        "C4_task_070:P0",
+        "C1_task_048:P4",
+        "C4_task_070:P3",
+        "C2_task_070:P1",
+        "C1_task_093:P0",
+        "C1_task_088:P0",
+        "C1_task_023:P3",
+        "C1_task_088:P4",
+        "C4_task_070:P1",
+        "C3_task_049:P4",
+        "C4_task_087:P0",
+        "C1_task_054:P1",
+        "C1_task_035:P2",
+        "C4_task_017:P4"
+      ]
+    },
+    {
+      "gpu": "7",
+      "identity": "17b62eaf8b0438e6f0c75da4f8fcf98190cecb42c51db0d3aab5308220b6b5d5",
+      "requested_ids": [
+        "C1_task_008:P2",
+        "C3_task_066:P3",
+        "C1_task_096:P1",
+        "C3_task_007:P3",
+        "C3_task_088:P0",
+        "C2_task_029:P3",
+        "C1_task_008:P4",
+        "C3_task_080:P3",
+        "C3_task_094:P1",
+        "C2_task_033:P4",
+        "C4_task_025:P3",
+        "C2_task_100:P4",
+        "C4_task_034:P4",
+        "C3_task_011:P4",
+        "C1_task_088:P1",
+        "C2_task_070:P4",
+        "C1_task_041:P1",
+        "C3_task_037:P4",
+        "C4_task_047:P1",
+        "C1_task_054:P0",
+        "C3_task_097:P2",
+        "C2_task_051:P2",
+        "C2_task_100:P1",
+        "C4_task_087:P4",
+        "C1_task_096:P0",
+        "C3_task_094:P3",
+        "C3_task_007:P0",
+        "C4_task_034:P3",
+        "C1_task_023:P4",
+        "C1_task_093:P3",
+        "C1_task_096:P4",
+        "C3_task_070:P0",
+        "C3_task_011:P1",
+        "C3_task_070:P2",
+        "C4_task_056:P0",
+        "C4_task_087:P1",
+        "C1_task_054:P4",
+        "C3_task_049:P2",
+        "C1_task_023:P0",
+        "C3_task_011:P0"
+      ]
+    }
+  ],
+  "inherited_completed_episodes": [
+    [
+      "C1_task_048:P0",
+      0
+    ],
+    [
+      "C1_task_089:P0",
+      0
+    ],
+    [
+      "C1_task_089:P1",
+      0
+    ],
+    [
+      "C1_task_035:P1",
+      0
+    ],
+    [
+      "C4_task_025:P1",
+      0
+    ],
+    [
+      "C2_task_100:P2",
+      0
+    ],
+    [
+      "C2_task_033:P2",
+      0
+    ],
+    [
+      "C2_task_051:P1",
+      0
+    ],
+    [
+      "C2_task_013:P2",
+      0
+    ],
+    [
+      "C1_task_023:P2",
+      0
+    ],
+    [
+      "C2_task_062:P0",
+      0
+    ],
+    [
+      "C2_task_100:P3",
+      0
+    ],
+    [
+      "C3_task_066:P1",
+      0
+    ],
+    [
+      "C3_task_007:P1",
+      0
+    ],
+    [
+      "C1_task_089:P4",
+      0
+    ],
+    [
+      "C3_task_037:P1",
+      0
+    ],
+    [
+      "C1_task_008:P1",
+      0
+    ],
+    [
+      "C3_task_011:P3",
+      0
+    ],
+    [
+      "C1_task_008:P3",
+      0
+    ],
+    [
+      "C1_task_023:P1",
+      0
+    ],
+    [
+      "C2_task_070:P3",
+      0
+    ],
+    [
+      "C1_task_035:P3",
+      0
+    ],
+    [
+      "C1_task_008:P0",
+      0
+    ],
+    [
+      "C3_task_037:P0",
+      0
+    ],
+    [
+      "C1_task_096:P3",
+      0
+    ],
+    [
+      "C2_task_062:P2",
+      0
+    ],
+    [
+      "C2_task_051:P4",
+      0
+    ],
+    [
+      "C1_task_048:P1",
+      0
+    ],
+    [
+      "C3_task_080:P1",
+      0
+    ],
+    [
+      "C3_task_011:P2",
+      0
+    ],
+    [
+      "C3_task_037:P2",
+      0
+    ],
+    [
+      "C1_task_048:P3",
+      0
+    ],
+    [
+      "C3_task_080:P0",
+      0
+    ],
+    [
+      "C1_task_089:P3",
+      0
+    ],
+    [
+      "C2_task_066:P2",
+      0
+    ],
+    [
+      "C3_task_070:P1",
+      0
+    ],
+    [
+      "C3_task_070:P3",
+      0
+    ],
+    [
+      "C2_task_062:P1",
+      0
+    ],
+    [
+      "C2_task_062:P3",
+      0
+    ],
+    [
+      "C4_task_047:P2",
+      0
+    ],
+    [
+      "C1_task_048:P4",
+      0
+    ],
+    [
+      "C1_task_023:P3",
+      0
+    ],
+    [
+      "C1_task_008:P2",
+      0
+    ],
+    [
+      "C1_task_096:P1",
+      0
+    ],
+    [
+      "C1_task_008:P4",
+      0
+    ],
+    [
+      "C3_task_080:P3",
+      0
+    ],
+    [
+      "C2_task_033:P4",
+      0
+    ],
+    [
+      "C3_task_011:P4",
+      0
+    ],
+    [
+      "C3_task_037:P4",
+      0
+    ],
+    [
+      "C2_task_051:P2",
+      0
+    ],
+    [
+      "C2_task_100:P1",
+      0
+    ],
+    [
+      "C1_task_096:P0",
+      0
+    ],
+    [
+      "C1_task_023:P4",
+      0
+    ],
+    [
+      "C3_task_011:P1",
+      0
+    ],
+    [
+      "C3_task_070:P2",
+      0
+    ],
+    [
+      "C1_task_054:P4",
+      0
+    ],
+    [
+      "C1_task_023:P0",
+      0
+    ],
+    [
+      "C3_task_011:P0",
+      0
+    ]
+  ],
+  "identity": "0c6c158839be53929dc1f3b8e54aa819914321a8b70a567ef557de4d6d3cc3e8"
+}

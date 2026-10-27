@@ -1,0 +1,14 @@
+{
+  "protocol_error_trajectories": 51,
+  "schema_error_trajectories": 18,
+  "terminations": {
+    "max_rounds": 39,
+    "final_answer": 159,
+    "context_budget": 2
+  },
+  "observed_failure_patterns": [
+    "P2/P4: continuing dependent tools after permanent failure, or failing to complete an alternative path.",
+    "P3: not retrying corrupted results.",
+    "Unfinished trajectories reaching the 16-round limit."
+  ]
+}

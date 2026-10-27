@@ -1,0 +1,5 @@
+{
+  "passed": true,
+  "real_trajectories_checked": 12,
+  "reference": "Actual anchors/spans recorded by the smoke episode coroutine before each action"
+}

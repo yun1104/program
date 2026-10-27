@@ -1,0 +1,30 @@
+{
+  "task": "C2_task_100:P1",
+  "title": "暂时性错误：SFT 重复操作，GRPO 重试后完成",
+  "records": [
+    {
+      "model": "SFT",
+      "source": "runs/eval/qwen35_2b_sft_vllm_test_20261026/episodes/C2_task_100_P1_00.json",
+      "snapshot": "reports/project/cases/01_retry/sft.json",
+      "sha256": "b7086d2053a5a2319bbfe1ddd2de620e5157bb51b73eb0e3c76a2b5f2768cd10",
+      "official_pass": false,
+      "strict_pass": false,
+      "tool_calls": 16,
+      "invalid_actions": 0,
+      "validation_errors": 1,
+      "termination": "max_rounds"
+    },
+    {
+      "model": "GRPO",
+      "source": "runs/eval/qwen35_2b_grpo_vllm_test_20261027/episodes/C2_task_100_P1_00.json",
+      "snapshot": "reports/project/cases/01_retry/grpo.json",
+      "sha256": "2c896198a3fb2937c682829453745eee728bd5dece14b09240541647c64a2b86",
+      "official_pass": true,
+      "strict_pass": true,
+      "tool_calls": 7,
+      "invalid_actions": 0,
+      "validation_errors": 0,
+      "termination": "final_answer"
+    }
+  ]
+}

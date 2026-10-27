@@ -1,0 +1,201 @@
+id,trial,mode,base_official,sft_official,base_strict,sft_strict,sft_termination,sft_failure_reason
+C1_task_008:P0,0,P0,True,True,True,True,final_answer,
+C1_task_008:P1,0,P1,False,True,False,True,final_answer,
+C1_task_008:P2,0,P2,False,False,False,False,final_answer,P2 failed: agent should have stopped but called other tools after victim: ['place_sell_order']
+C1_task_008:P3,0,P3,False,True,False,True,final_answer,
+C1_task_008:P4,0,P4,False,False,False,False,final_answer,"P4 failed: agent should have stopped but called other tools after victim: ['get_contact_info', 'get_current_time', 'get_market_status_polygon', 'place_sell_order']"
+C1_task_023:P0,0,P0,False,True,False,True,final_answer,
+C1_task_023:P1,0,P1,False,True,False,True,final_answer,
+C1_task_023:P2,0,P2,False,False,False,False,final_answer,"P2 failed: agent should have stopped but called other tools after victim: ['cancel_reservation', 'snapshot_workspace']"
+C1_task_023:P3,0,P3,False,True,False,True,final_answer,
+C1_task_023:P4,0,P4,False,False,False,False,final_answer,"P4 failed: agent should have stopped but called other tools after victim: ['build_light_brightness_request', 'get_light_status']"
+C1_task_035:P0,0,P0,True,False,False,False,final_answer,P0 failed: missing required tools: ['select_recommendation']
+C1_task_035:P1,0,P1,False,False,False,False,final_answer,P1 failed: missing required tools: ['select_recommendation']
+C1_task_035:P2,0,P2,False,False,False,False,final_answer,"P2 failed: agent should have stopped but called other tools after victim: ['get_recommendations', 'submit_order_with_best_discount']"
+C1_task_035:P3,0,P3,False,True,False,False,final_answer,
+C1_task_035:P4,0,P4,False,False,False,False,final_answer,P4 failed: agent should have stopped but called other tools after victim: ['submit_order_with_best_discount']
+C1_task_041:P0,0,P0,True,True,True,True,final_answer,
+C1_task_041:P1,0,P1,False,True,False,True,final_answer,
+C1_task_041:P2,0,P2,False,False,False,False,final_answer,"P2 failed: agent should have stopped but called other tools after victim: ['get_contact_info', 'get_recommendations', 'push_alert']"
+C1_task_041:P3,0,P3,False,False,False,False,final_answer,"P3 failed: no retry on 'order_items' (called 1 time(s), need >=2)"
+C1_task_041:P4,0,P4,False,False,False,False,final_answer,P4 failed: agent should have stopped but called other tools after victim: ['push_alert']
+C1_task_048:P0,0,P0,False,False,False,False,final_answer,"P0 failed: missing required tools: ['get_account_balance', 'get_exchange_rate_fixer', 'place_sell_order']"
+C1_task_048:P1,0,P1,False,False,False,False,final_answer,"P1 failed: no retry on 'place_sell_order' (called 0 time(s), need >=2); 'place_sell_order' never succeeded after retries; missing required tools: ['get_exchange_rate_fixer', 'place_sell_order', 'analyze_text']"
+C1_task_048:P2,0,P2,False,False,False,False,final_answer,P2 failed: 'place_sell_order' was never called
+C1_task_048:P3,0,P3,False,False,False,False,final_answer,"P3 failed: no retry on 'place_sell_order' (called 0 time(s), need >=2); 'place_sell_order' never returned clean data after retries; missing required tools: ['get_exchange_rate_fixer', 'get_account_balance', 'place_sell_order', 'analyze_text']"
+C1_task_048:P4,0,P4,False,False,False,False,final_answer,P4 failed: 'place_sell_order' was never called
+C1_task_054:P0,0,P0,False,True,False,True,final_answer,
+C1_task_054:P1,0,P1,False,True,False,True,final_answer,
+C1_task_054:P2,0,P2,False,False,False,False,final_answer,P2 failed: agent should have stopped but called other tools after victim: ['get_flight_info_flightaware']; 'book_flight_with_status_check' is the last node; final_answer must contain an explicit abort signal
+C1_task_054:P3,0,P3,False,True,False,True,final_answer,
+C1_task_054:P4,0,P4,False,False,False,False,final_answer,"P4 failed: agent should have stopped but called other tools after victim: ['build_weather_data_payload', 'create_document_and_alert_from_data', 'get_flight_info_flightaware']; 'book_flight_with_status_check' is the last node; final_answer must contain an explicit abort signal"
+C1_task_088:P0,0,P0,True,True,False,True,final_answer,
+C1_task_088:P1,0,P1,False,True,False,True,final_answer,
+C1_task_088:P2,0,P2,False,False,False,False,final_answer,P2 failed: agent should have stopped but called other tools after victim: ['snapshot_workspace']
+C1_task_088:P3,0,P3,False,False,False,False,final_answer,"P3 failed: no retry on 'convert_datetime' (called 1 time(s), need >=2)"
+C1_task_088:P4,0,P4,False,False,False,False,final_answer,P4 failed: agent should have stopped but called other tools after victim: ['snapshot_workspace']
+C1_task_089:P0,0,P0,False,True,False,False,final_answer,
+C1_task_089:P1,0,P1,True,True,True,True,final_answer,
+C1_task_089:P2,0,P2,False,False,False,False,max_rounds,P2 failed: agent should have stopped but called other tools after victim: ['build_checkout_from_hold']
+C1_task_089:P3,0,P3,False,True,False,False,final_answer,
+C1_task_089:P4,0,P4,False,False,False,False,max_rounds,P4 failed: agent should have stopped but called other tools after victim: ['build_checkout_from_hold']
+C1_task_093:P0,0,P0,False,True,False,True,final_answer,
+C1_task_093:P1,0,P1,False,True,False,True,final_answer,
+C1_task_093:P2,0,P2,False,False,False,False,final_answer,"P2 failed: agent should have stopped but called other tools after victim: ['build_invoice_from_hold', 'create_document_and_alert_from_data', 'submit_order_from_summary']"
+C1_task_093:P3,0,P3,False,False,False,False,final_answer,"P3 failed: no retry on 'generate_invoice_from_hold' (called 1 time(s), need >=2)"
+C1_task_093:P4,0,P4,False,False,False,False,final_answer,"P4 failed: agent should have stopped but called other tools after victim: ['build_invoice_from_hold', 'create_document_and_alert_from_data', 'submit_order_from_summary']"
+C1_task_096:P0,0,P0,True,True,True,True,final_answer,
+C1_task_096:P1,0,P1,False,True,False,True,final_answer,
+C1_task_096:P2,0,P2,False,False,False,False,final_answer,"P2 failed: agent should have stopped but called other tools after victim: ['create_document', 'push_alert_contact_by_name', 'restart_device']"
+C1_task_096:P3,0,P3,False,False,False,False,final_answer,"P3 failed: no retry on 'build_device_restart_request' (called 1 time(s), need >=2)"
+C1_task_096:P4,0,P4,False,False,False,False,final_answer,"P4 failed: agent should have stopped but called other tools after victim: ['create_document', 'push_alert_contact_by_name', 'restart_device']"
+C2_task_002:P0,0,P0,True,True,True,True,final_answer,
+C2_task_002:P1,0,P1,True,True,True,True,final_answer,
+C2_task_002:P2,0,P2,True,True,True,True,final_answer,
+C2_task_002:P3,0,P3,True,True,False,True,final_answer,
+C2_task_002:P4,0,P4,True,True,False,True,final_answer,
+C2_task_013:P0,0,P0,False,True,False,True,final_answer,
+C2_task_013:P1,0,P1,False,True,False,True,final_answer,
+C2_task_013:P2,0,P2,False,True,False,True,final_answer,
+C2_task_013:P3,0,P3,False,True,False,True,final_answer,
+C2_task_013:P4,0,P4,False,True,False,True,final_answer,
+C2_task_029:P0,0,P0,True,True,True,True,final_answer,
+C2_task_029:P1,0,P1,False,True,False,True,final_answer,
+C2_task_029:P2,0,P2,False,True,False,True,final_answer,
+C2_task_029:P3,0,P3,False,True,False,True,final_answer,
+C2_task_029:P4,0,P4,False,True,False,True,final_answer,
+C2_task_033:P0,0,P0,False,True,False,True,final_answer,
+C2_task_033:P1,0,P1,False,True,False,True,final_answer,
+C2_task_033:P2,0,P2,True,True,True,True,final_answer,
+C2_task_033:P3,0,P3,False,True,False,True,final_answer,
+C2_task_033:P4,0,P4,False,False,False,False,final_answer,P4 failed: 'get_flight_info_aviationstack' permanently failed but agent did not switch to alt tool
+C2_task_051:P0,0,P0,True,True,True,True,final_answer,
+C2_task_051:P1,0,P1,False,True,False,True,final_answer,
+C2_task_051:P2,0,P2,False,True,False,True,final_answer,
+C2_task_051:P3,0,P3,False,True,False,True,final_answer,
+C2_task_051:P4,0,P4,False,True,False,True,final_answer,
+C2_task_056:P0,0,P0,True,True,True,False,max_rounds,
+C2_task_056:P1,0,P1,True,True,False,True,final_answer,
+C2_task_056:P2,0,P2,True,True,True,True,final_answer,
+C2_task_056:P3,0,P3,True,True,False,True,final_answer,
+C2_task_056:P4,0,P4,True,True,True,True,final_answer,
+C2_task_062:P0,0,P0,False,False,False,False,final_answer,"C2 P0 failed: no complete path executed successfully; missing_tools=['get_current_time', 'update_cart_item']"
+C2_task_062:P1,0,P1,False,False,False,False,final_answer,"P1 failed: missing shared tools: ['get_current_time', 'update_cart_item']"
+C2_task_062:P2,0,P2,False,False,False,False,final_answer,"P2 failed: missing shared tools: ['get_current_time', 'update_cart_item']"
+C2_task_062:P3,0,P3,False,False,False,False,final_answer,"P3 failed: missing shared tools: ['get_current_time', 'update_cart_item']"
+C2_task_062:P4,0,P4,False,False,False,False,final_answer,"P4 failed: missing shared tools: ['get_current_time', 'update_cart_item']"
+C2_task_066:P0,0,P0,False,True,False,True,final_answer,
+C2_task_066:P1,0,P1,False,True,False,True,final_answer,
+C2_task_066:P2,0,P2,False,False,False,False,final_answer,P2 failed: 'update_device_config' permanently failed but agent did not switch to alt tool
+C2_task_066:P3,0,P3,False,True,False,True,final_answer,
+C2_task_066:P4,0,P4,False,True,False,True,final_answer,
+C2_task_070:P0,0,P0,True,True,False,True,final_answer,
+C2_task_070:P1,0,P1,True,True,True,True,final_answer,
+C2_task_070:P2,0,P2,True,True,False,True,final_answer,
+C2_task_070:P3,0,P3,False,True,False,True,final_answer,
+C2_task_070:P4,0,P4,False,True,False,True,final_answer,
+C2_task_100:P0,0,P0,True,False,False,False,final_answer,C2 P0 failed: no complete path executed successfully; missing_tools=['get_iot_device_status']
+C2_task_100:P1,0,P1,False,False,False,False,max_rounds,P1 failed: missing shared tools: ['create_document_and_alert']
+C2_task_100:P2,0,P2,False,False,False,False,max_rounds,P2 failed: missing shared tools: ['create_document_and_alert']
+C2_task_100:P3,0,P3,True,True,True,True,final_answer,
+C2_task_100:P4,0,P4,False,False,False,False,final_answer,P4 failed: missing shared tools: ['create_document_and_alert']
+C3_task_007:P0,0,P0,False,True,False,True,final_answer,
+C3_task_007:P1,0,P1,False,True,False,False,final_answer,
+C3_task_007:P2,0,P2,False,True,False,True,final_answer,
+C3_task_007:P3,0,P3,False,True,False,True,final_answer,
+C3_task_007:P4,0,P4,False,True,False,False,max_rounds,
+C3_task_011:P0,0,P0,True,True,True,True,final_answer,
+C3_task_011:P1,0,P1,False,True,False,True,final_answer,
+C3_task_011:P2,0,P2,False,True,False,True,final_answer,
+C3_task_011:P3,0,P3,False,False,False,False,final_answer,P3 failed: Sanity Ignorance - agent used corrupted data from 'get_aviationstack_gate_board_native' without retry
+C3_task_011:P4,0,P4,False,False,False,False,final_answer,P4 failed: 'get_aviationstack_gate_board_native' failed permanently but agent did not complete another valid path
+C3_task_037:P0,0,P0,True,True,True,True,final_answer,
+C3_task_037:P1,0,P1,False,True,False,False,final_answer,
+C3_task_037:P2,0,P2,False,True,False,False,max_rounds,
+C3_task_037:P3,0,P3,False,True,False,False,final_answer,
+C3_task_037:P4,0,P4,False,True,False,False,final_answer,
+C3_task_049:P0,0,P0,False,True,False,False,final_answer,
+C3_task_049:P1,0,P1,False,True,False,True,final_answer,
+C3_task_049:P2,0,P2,False,False,False,False,final_answer,P2 failed: no complete valid path executed successfully; 'get_recommendations_trending' failed permanently but agent did not complete another valid path
+C3_task_049:P3,0,P3,False,False,False,False,final_answer,P3 failed: Sanity Ignorance - agent used corrupted data from 'get_recommendations_trending' without retry
+C3_task_049:P4,0,P4,False,False,False,False,final_answer,P4 failed: 'get_recommendations_trending' failed permanently but agent did not complete another valid path
+C3_task_066:P0,0,P0,False,True,False,True,final_answer,
+C3_task_066:P1,0,P1,False,True,False,True,final_answer,
+C3_task_066:P2,0,P2,False,True,False,False,final_answer,
+C3_task_066:P3,0,P3,False,False,False,False,final_answer,P3 failed: no complete valid path executed successfully; 'get_booking_stay_sheet_native' neither led to a completed retried path nor a completed switched path
+C3_task_066:P4,0,P4,False,False,False,False,final_answer,P4 failed: 'get_booking_stay_sheet_native' failed permanently but agent did not complete another valid path
+C3_task_070:P0,0,P0,False,True,False,False,final_answer,
+C3_task_070:P1,0,P1,False,True,False,True,final_answer,
+C3_task_070:P2,0,P2,False,False,False,False,final_answer,P2 failed: no complete valid path executed successfully; 'get_weatherapi_alert_card_native' failed permanently but agent did not complete another valid path
+C3_task_070:P3,0,P3,False,True,False,True,final_answer,
+C3_task_070:P4,0,P4,False,False,False,False,final_answer,P4 failed: 'get_weatherapi_alert_card_native' failed permanently but agent did not complete another valid path
+C3_task_080:P0,0,P0,True,True,True,True,final_answer,
+C3_task_080:P1,0,P1,False,True,False,True,final_answer,
+C3_task_080:P2,0,P2,False,False,False,False,final_answer,P2 failed: no complete valid path executed successfully; 'get_light_mesh_snapshot_native' failed permanently but agent did not complete another valid path
+C3_task_080:P3,0,P3,False,False,False,False,final_answer,P3 failed: Sanity Ignorance - agent used corrupted data from 'get_light_mesh_snapshot_native' without retry
+C3_task_080:P4,0,P4,False,False,False,False,final_answer,P4 failed: 'get_light_mesh_snapshot_native' failed permanently but agent did not complete another valid path
+C3_task_088:P0,0,P0,False,True,False,True,final_answer,
+C3_task_088:P1,0,P1,False,True,False,True,final_answer,
+C3_task_088:P2,0,P2,False,True,False,False,max_rounds,
+C3_task_088:P3,0,P3,False,True,False,True,final_answer,
+C3_task_088:P4,0,P4,False,True,False,True,final_answer,
+C3_task_094:P0,0,P0,False,False,False,False,final_answer,C3 P0 failed: no complete valid path executed successfully; missing_tools=['archive_light_mesh_snapshot_native']
+C3_task_094:P1,0,P1,False,False,False,False,final_answer,P1 failed: no complete valid path executed successfully; 'get_light_mesh_snapshot_native' neither led to a completed retried path nor a completed switched path
+C3_task_094:P2,0,P2,False,True,False,True,final_answer,
+C3_task_094:P3,0,P3,False,True,False,False,final_answer,
+C3_task_094:P4,0,P4,False,False,False,False,final_answer,P4 failed: 'get_light_mesh_snapshot_native' failed permanently but agent did not complete another valid path
+C3_task_097:P0,0,P0,False,False,False,False,final_answer,C3 P0 failed: no complete valid path executed successfully; missing_tools=['express_checkout']
+C3_task_097:P1,0,P1,False,False,False,False,max_rounds,P1 failed: no complete valid path executed successfully; 'get_recommendations_content' neither led to a completed retried path nor a completed switched path
+C3_task_097:P2,0,P2,False,False,False,False,final_answer,P2 failed: no complete valid path executed successfully; 'get_recommendations_content' failed permanently but agent did not complete another valid path
+C3_task_097:P3,0,P3,False,False,False,False,final_answer,P3 failed: Sanity Ignorance - agent used corrupted data from 'get_recommendations_content' without retry
+C3_task_097:P4,0,P4,False,False,False,False,final_answer,P4 failed: no complete valid path executed successfully; 'get_recommendations_content' failed permanently but agent did not complete another valid path
+C4_task_017:P0,0,P0,True,True,False,True,final_answer,
+C4_task_017:P1,0,P1,True,True,True,True,final_answer,
+C4_task_017:P2,0,P2,False,True,False,True,final_answer,
+C4_task_017:P3,0,P3,False,True,False,True,final_answer,
+C4_task_017:P4,0,P4,False,True,False,True,final_answer,
+C4_task_025:P0,0,P0,False,False,False,False,final_answer,C4 P0 failed: no complete valid path executed successfully; missing_tools=['build_device_config_request']
+C4_task_025:P1,0,P1,False,False,False,False,final_answer,P1 failed: no complete valid path executed successfully; 'discover_smart_devices' neither led to a completed retried path nor a completed switched path
+C4_task_025:P2,0,P2,False,False,False,False,max_rounds,P2 failed: no complete valid path executed successfully; 'discover_smart_devices' failed permanently but agent did not complete another valid path
+C4_task_025:P3,0,P3,False,False,False,False,max_rounds,P3 failed: no complete valid path executed successfully; 'discover_smart_devices' neither led to a completed retried path nor a completed switched path
+C4_task_025:P4,0,P4,False,False,False,False,max_rounds,P4 failed: no complete valid path executed successfully; 'discover_smart_devices' failed permanently but agent did not complete another valid path
+C4_task_033:P0,0,P0,False,False,False,False,final_answer,C4 P0 failed: no complete valid path executed successfully; missing_tools=['get_weatherapi_alert_card_native']
+C4_task_033:P1,0,P1,False,True,False,True,final_answer,
+C4_task_033:P2,0,P2,False,True,False,True,final_answer,
+C4_task_033:P3,0,P3,False,True,False,False,final_answer,
+C4_task_033:P4,0,P4,False,True,False,False,final_answer,
+C4_task_034:P0,0,P0,False,False,False,False,max_rounds,"C4 P0 failed: no complete valid path executed successfully; missing_tools=['add_best_recommendation_to_cart', 'get_iot_device_status', 'hold_best_recommendation', 'push_alert_to_contact', 'stringify_data']"
+C4_task_034:P1,0,P1,False,True,False,False,max_rounds,
+C4_task_034:P2,0,P2,False,False,False,False,max_rounds,P2 failed: no complete valid path executed successfully; 'get_recommendations_content' failed permanently but agent did not complete another valid path
+C4_task_034:P3,0,P3,False,False,False,False,max_rounds,P3 failed: no complete valid path executed successfully; Sanity Ignorance - agent used corrupted data from 'get_recommendations_content' without retry
+C4_task_034:P4,0,P4,False,False,False,False,max_rounds,P4 failed: no complete valid path executed successfully; 'get_recommendations_content' failed permanently but agent did not complete another valid path
+C4_task_047:P0,0,P0,False,True,False,False,final_answer,
+C4_task_047:P1,0,P1,False,False,False,False,max_rounds,P1 failed: no complete valid path executed successfully; 'get_cart_summary' neither led to a completed retried path nor a completed switched path
+C4_task_047:P2,0,P2,False,False,False,False,max_rounds,P2 failed: no complete valid path executed successfully; 'get_exchange_rate_currencyapi' failed permanently but agent did not complete another valid path
+C4_task_047:P3,0,P3,False,False,False,False,max_rounds,P3 failed: no complete valid path executed successfully; Sanity Ignorance - agent used corrupted data from 'get_cart_summary' without retry
+C4_task_047:P4,0,P4,False,False,False,False,max_rounds,P4 failed: no complete valid path executed successfully; 'get_exchange_rate_currencyapi' failed permanently but agent did not complete another valid path
+C4_task_056:P0,0,P0,False,False,False,False,final_answer,C4 P0 failed: no complete valid path executed successfully; missing_tools=['send_email']
+C4_task_056:P1,0,P1,False,False,False,False,final_answer,P1 failed: no complete valid path executed successfully; 'get_recommendations_trending' neither led to a completed retried path nor a completed switched path
+C4_task_056:P2,0,P2,False,False,False,False,max_rounds,P2 failed: no complete valid path executed successfully; 'get_recommendations_trending' failed permanently but agent did not complete another valid path
+C4_task_056:P3,0,P3,False,False,False,False,final_answer,P3 failed: no complete valid path executed successfully; Sanity Ignorance - agent used corrupted data from 'get_news_newsapi' without retry
+C4_task_056:P4,0,P4,False,False,False,False,max_rounds,P4 failed: no complete valid path executed successfully; 'get_recommendations_trending' failed permanently but agent did not complete another valid path
+C4_task_063:P0,0,P0,False,False,False,False,max_rounds,"C4 P0 failed: no complete valid path executed successfully; missing_tools=['get_hotel_info_booking', 'submit_order']"
+C4_task_063:P1,0,P1,False,False,False,False,context_budget,P1 failed: no complete valid path executed successfully; 'get_recommendations_collaborative' neither led to a completed retried path nor a completed switched path
+C4_task_063:P2,0,P2,False,False,False,False,max_rounds,P2 failed: no complete valid path executed successfully; 'get_available_coupons' failed permanently but agent did not complete another valid path
+C4_task_063:P3,0,P3,False,False,False,False,context_budget,P3 failed: no complete valid path executed successfully; Sanity Ignorance - agent used corrupted data from 'get_recommendations_collaborative' without retry
+C4_task_063:P4,0,P4,False,False,False,False,max_rounds,P4 failed: no complete valid path executed successfully; 'get_recommendations_collaborative' failed permanently but agent did not complete another valid path
+C4_task_070:P0,0,P0,False,False,False,False,final_answer,"C4 P0 failed: no complete valid path executed successfully; missing_tools=['select_discovered_device_by_type', 'send_instant_message']"
+C4_task_070:P1,0,P1,False,False,False,False,max_rounds,P1 failed: no complete valid path executed successfully; 'discover_smart_devices' neither led to a completed retried path nor a completed switched path
+C4_task_070:P2,0,P2,False,False,False,False,max_rounds,P2 failed: no complete valid path executed successfully; 'discover_smart_devices' failed permanently but agent did not complete another valid path
+C4_task_070:P3,0,P3,False,False,False,False,max_rounds,P3 failed: no complete valid path executed successfully; 'discover_smart_devices' neither led to a completed retried path nor a completed switched path
+C4_task_070:P4,0,P4,False,False,False,False,max_rounds,P4 failed: no complete valid path executed successfully; 'discover_smart_devices' failed permanently but agent did not complete another valid path
+C4_task_084:P0,0,P0,False,True,False,False,max_rounds,
+C4_task_084:P1,0,P1,False,False,False,False,final_answer,P1 failed: no complete valid path executed successfully; 'discover_smart_devices' neither led to a completed retried path nor a completed switched path
+C4_task_084:P2,0,P2,False,False,False,False,max_rounds,P2 failed: no complete valid path executed successfully; 'discover_smart_devices' failed permanently but agent did not complete another valid path
+C4_task_084:P3,0,P3,False,True,False,False,max_rounds,
+C4_task_084:P4,0,P4,False,False,False,False,max_rounds,P4 failed: no complete valid path executed successfully; 'discover_smart_devices' failed permanently but agent did not complete another valid path
+C4_task_087:P0,0,P0,False,False,False,False,max_rounds,C4 P0 failed: no complete valid path executed successfully; missing_tools=['express_checkout']
+C4_task_087:P1,0,P1,False,False,False,False,max_rounds,P1 failed: no complete valid path executed successfully; 'hold_best_recommendation' neither led to a completed retried path nor a completed switched path
+C4_task_087:P2,0,P2,False,False,False,False,max_rounds,P2 failed: no complete valid path executed successfully; 'get_available_coupons' failed permanently but agent did not complete another valid path
+C4_task_087:P3,0,P3,False,False,False,False,max_rounds,P3 failed: no complete valid path executed successfully; Sanity Ignorance - agent used corrupted data from 'hold_best_recommendation' without retry
+C4_task_087:P4,0,P4,False,False,False,False,max_rounds,P4 failed: 'checkout_best_recommendation' failed permanently but agent did not complete another valid path

@@ -1,0 +1,6 @@
+{
+  "scripts/toolmaze_agent/configs/sft_full_trl.yaml": "8cf5610b05fa7b9ead5eed0a549e81f209c078ed0ff450c293784639c24eac94",
+  "scripts/toolmaze_agent/configs/zero2_gpu.json": "4b5f359768f13bb187bb4f9f684dde717ae9e8bcb97b2c0f081d800fc9d53843",
+  "tools/run_sft.py": "e203e629aa20eb443282390b4f738eee7cfd5dc5fe0f1a53ff4a745b31d22d8c",
+  "requirements-sft-kernels.txt": "5661bd46ca4b8dda641b49fc71d2b80c24f8f6c0909d6dd66dc46ca7065984a3"
+}

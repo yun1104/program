@@ -1,0 +1,121 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>ToolMaze 实验比较</title>
+<style>body{font:15px system-ui;max-width:1400px;margin:40px auto;padding:0 20px}table{border-collapse:collapse;width:100%}th,td{padding:8px;border:1px solid #ddd;text-align:left}th{background:#eef3f8}pre{white-space:pre-wrap}tr:nth-child(even){background:#fafafa}</style>
+<h1>ToolMaze 实验比较</h1><p>官方通过率与额外严格检查分别报告。基础设施错误仍计入分母。结果仅说明受控模拟环境中的表现。</p>
+<table><thead><tr><th>实验</th><th>切片</th><th>样本数</th><th>官方通过率</th><th>严格通过率</th><th>工具调用</th><th>Tokens</th><th>基础设施错误</th></tr></thead><tbody><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>all</td><td>200</td><td>14.5%</td><td>9.5%</td><td>6.07</td><td>29004</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C1/P0</td><td>10</td><td>50.0%</td><td>30.0%</td><td>3.90</td><td>14240</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C1/P1</td><td>10</td><td>10.0%</td><td>10.0%</td><td>3.40</td><td>19011</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C1/P2</td><td>10</td><td>0.0%</td><td>0.0%</td><td>4.50</td><td>18313</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C1/P3</td><td>10</td><td>0.0%</td><td>0.0%</td><td>3.40</td><td>6785</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C1/P4</td><td>10</td><td>0.0%</td><td>0.0%</td><td>3.30</td><td>14036</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C2/P0</td><td>10</td><td>60.0%</td><td>40.0%</td><td>4.40</td><td>17918</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C2/P1</td><td>10</td><td>30.0%</td><td>20.0%</td><td>5.00</td><td>20510</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C2/P2</td><td>10</td><td>40.0%</td><td>30.0%</td><td>5.40</td><td>14841</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C2/P3</td><td>10</td><td>30.0%</td><td>10.0%</td><td>4.90</td><td>27856</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C2/P4</td><td>10</td><td>20.0%</td><td>10.0%</td><td>6.40</td><td>19156</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C3/P0</td><td>10</td><td>30.0%</td><td>30.0%</td><td>5.90</td><td>32018</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C3/P1</td><td>10</td><td>0.0%</td><td>0.0%</td><td>5.00</td><td>23299</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C3/P2</td><td>10</td><td>0.0%</td><td>0.0%</td><td>6.30</td><td>24615</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C3/P3</td><td>10</td><td>0.0%</td><td>0.0%</td><td>6.00</td><td>21760</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C3/P4</td><td>10</td><td>0.0%</td><td>0.0%</td><td>5.20</td><td>25020</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C4/P0</td><td>10</td><td>10.0%</td><td>0.0%</td><td>9.90</td><td>57441</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C4/P1</td><td>10</td><td>10.0%</td><td>10.0%</td><td>9.90</td><td>54135</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C4/P2</td><td>10</td><td>0.0%</td><td>0.0%</td><td>9.30</td><td>45714</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C4/P3</td><td>10</td><td>0.0%</td><td>0.0%</td><td>9.90</td><td>63352</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>cell/C4/P4</td><td>10</td><td>0.0%</td><td>0.0%</td><td>9.40</td><td>60061</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>complexity/C1</td><td>50</td><td>12.0%</td><td>8.0%</td><td>3.70</td><td>14477</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>complexity/C2</td><td>50</td><td>36.0%</td><td>22.0%</td><td>5.22</td><td>20056</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>complexity/C3</td><td>50</td><td>6.0%</td><td>6.0%</td><td>5.68</td><td>25342</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>complexity/C4</td><td>50</td><td>4.0%</td><td>2.0%</td><td>9.68</td><td>56140</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>domain/Travel</td><td>75</td><td>10.7%</td><td>6.7%</td><td>5.56</td><td>25117</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>mode/P0</td><td>40</td><td>37.5%</td><td>25.0%</td><td>6.03</td><td>30404</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>mode/P1</td><td>40</td><td>12.5%</td><td>10.0%</td><td>5.83</td><td>29239</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>mode/P2</td><td>40</td><td>10.0%</td><td>7.5%</td><td>6.38</td><td>25871</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>mode/P3</td><td>40</td><td>7.5%</td><td>2.5%</td><td>6.05</td><td>29938</td><td>0</td></tr><tr><td>runs/eval/qwen35_2b_base_vllm_test_20261026</td><td>mode/P4</td><td>40</td><td>5.0%</td><td>2.5%</td><td>6.08</td><td>29568</td><td>0</td></tr></tbody></table><h2>runs/eval/qwen35_2b_base_vllm_test_20261026</h2><pre>{
+  &quot;timestamp&quot;: &quot;2026-10-26T14:00:31.811124&quot;,
+  &quot;total_tasks&quot;: 200,
+  &quot;tsr&quot;: {
+    &quot;P0&quot;: 0.375,
+    &quot;P1&quot;: 0.125,
+    &quot;P2&quot;: 0.1,
+    &quot;P3&quot;: 0.075,
+    &quot;P4&quot;: 0.05
+  },
+  &quot;prr&quot;: {
+    &quot;P1&quot;: 0.2647058823529412,
+    &quot;P2&quot;: 0.11363636363636363,
+    &quot;P3&quot;: 0.12121212121212122,
+    &quot;P4&quot;: 0.05263157894736842
+  },
+  &quot;rc&quot;: {
+    &quot;P1&quot;: 0.84375,
+    &quot;P2&quot;: 0.8888888888888888,
+    &quot;P3&quot;: 0.913978494623656,
+    &quot;P4&quot;: 0.946236559139785
+  },
+  &quot;insights&quot;: {
+    &quot;validation_gap&quot;: &quot;P4 PRR (5.26%) shows weak data validation capabilities after fault exposure&quot;
+  },
+  &quot;mode_breakdown&quot;: {
+    &quot;P2&quot;: {
+      &quot;total&quot;: 40,
+      &quot;passed&quot;: 4,
+      &quot;failed&quot;: 36,
+      &quot;avg_tokens&quot;: 25870.775,
+      &quot;min_tokens&quot;: 2777,
+      &quot;max_tokens&quot;: 71315
+    },
+    &quot;P1&quot;: {
+      &quot;total&quot;: 40,
+      &quot;passed&quot;: 5,
+      &quot;failed&quot;: 35,
+      &quot;avg_tokens&quot;: 29238.8,
+      &quot;min_tokens&quot;: 2266,
+      &quot;max_tokens&quot;: 86683
+    },
+    &quot;P3&quot;: {
+      &quot;total&quot;: 40,
+      &quot;passed&quot;: 3,
+      &quot;failed&quot;: 37,
+      &quot;avg_tokens&quot;: 29938.025,
+      &quot;min_tokens&quot;: 2865,
+      &quot;max_tokens&quot;: 79466
+    },
+    &quot;P4&quot;: {
+      &quot;total&quot;: 40,
+      &quot;passed&quot;: 2,
+      &quot;failed&quot;: 38,
+      &quot;avg_tokens&quot;: 29568.1,
+      &quot;min_tokens&quot;: 3053,
+      &quot;max_tokens&quot;: 88877
+    },
+    &quot;P0&quot;: {
+      &quot;total&quot;: 40,
+      &quot;passed&quot;: 15,
+      &quot;failed&quot;: 25,
+      &quot;avg_tokens&quot;: 30404.2,
+      &quot;min_tokens&quot;: 3026,
+      &quot;max_tokens&quot;: 87136
+    }
+  },
+  &quot;recovery_breakdown&quot;: {
+    &quot;P1&quot;: {
+      &quot;total&quot;: 40,
+      &quot;hit_count&quot;: 32,
+      &quot;no_hit_count&quot;: 8,
+      &quot;hit_pass_count&quot;: 5,
+      &quot;hit_fail_count&quot;: 27,
+      &quot;prr_denominator&quot;: 34,
+      &quot;prr_numerator&quot;: 9,
+      &quot;rc_sample_count&quot;: 32,
+      &quot;avg_actual_recovery_calls&quot;: 4.71875,
+      &quot;avg_oracle_recovery_calls&quot;: 6.75
+    },
+    &quot;P2&quot;: {
+      &quot;total&quot;: 40,
+      &quot;hit_count&quot;: 36,
+      &quot;no_hit_count&quot;: 4,
+      &quot;hit_pass_count&quot;: 4,
+      &quot;hit_fail_count&quot;: 32,
+      &quot;prr_denominator&quot;: 44,
+      &quot;prr_numerator&quot;: 5,
+      &quot;rc_sample_count&quot;: 36,
+      &quot;avg_actual_recovery_calls&quot;: 5.333333333333333,
+      &quot;avg_oracle_recovery_calls&quot;: 5.666666666666667
+    },
+    &quot;P3&quot;: {
+      &quot;total&quot;: 40,
+      &quot;hit_count&quot;: 31,
+      &quot;no_hit_count&quot;: 9,
+      &quot;hit_pass_count&quot;: 3,
+      &quot;hit_fail_count&quot;: 28,
+      &quot;prr_denominator&quot;: 33,
+      &quot;prr_numerator&quot;: 4,
+      &quot;rc_sample_count&quot;: 31,
+      &quot;avg_actual_recovery_calls&quot;: 5.548387096774194,
+      &quot;avg_oracle_recovery_calls&quot;: 6.612903225806452
+    },
+    &quot;P4&quot;: {
+      &quot;total&quot;: 40,
+      &quot;hit_count&quot;: 31,
+      &quot;no_hit_count&quot;: 9,
+      &quot;hit_pass_count&quot;: 2,
+      &quot;hit_fail_count&quot;: 29,
+      &quot;prr_denominator&quot;: 38,
+      &quot;prr_numerator&quot;: 2,
+      &quot;rc_sample_count&quot;: 31,
+      &quot;avg_actual_recovery_calls&quot;: 5.225806451612903,
+      &quot;avg_oracle_recovery_calls&quot;: 5.806451612903226
+    }
+  }
+}</pre></html>

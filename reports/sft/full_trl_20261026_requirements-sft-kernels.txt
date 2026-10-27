@@ -1,0 +1,4 @@
+# Install both together to preserve the shared fla namespace:
+# python -m pip install --target .deps/sft_fast --no-deps -r requirements-sft-kernels.txt
+flash-linear-attention==0.6.0
+fla-core==0.6.0

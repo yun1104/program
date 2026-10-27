@@ -1,0 +1,8 @@
+{
+  "checked_texts": 4257,
+  "failures": [],
+  "base_class": "Qwen2Tokenizer",
+  "sft_class": "Qwen2Tokenizer",
+  "base_eos": 248046,
+  "sft_eos": 248046
+}

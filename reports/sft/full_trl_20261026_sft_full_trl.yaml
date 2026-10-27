@@ -1,0 +1,41 @@
+seed: 20261026
+model: models/Qwen3.5-2B
+data: runs/sft_data/train.jsonl
+output: runs/sft_full_trl_20261026
+dtype: bfloat16
+freeze_vision: true
+max_length: 8192
+final_symlink_to_last_checkpoint: true
+training:
+  num_train_epochs: 2
+  per_device_train_batch_size: 6
+  gradient_accumulation_steps: 1
+  learning_rate: 0.00001
+  weight_decay: 0.01
+  warmup_steps: 3
+  lr_scheduler_type: cosine
+  loss_type: chunked_nll
+  bf16: true
+  tf32: true
+  gradient_checkpointing: true
+  gradient_checkpointing_kwargs:
+    use_reentrant: false
+  max_grad_norm: 1.0
+  logging_steps: 1
+  save_strategy: epoch
+  save_total_limit: 1
+  save_only_model: true
+  report_to: none
+  optim: adamw_torch_fused
+  ddp_find_unused_parameters: false
+  deepspeed: scripts/toolmaze_agent/configs/zero2_gpu.json
+  dataset_kwargs:
+    skip_prepare_dataset: true
+  packing: false
+  padding_free: false
+  remove_unused_columns: false
+  train_sampling_strategy: group_by_length
+  dataloader_num_workers: 2
+  dataloader_pin_memory: true
+  include_num_input_tokens_seen: true
+  average_tokens_across_devices: true

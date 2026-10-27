@@ -1,0 +1,30 @@
+{
+  "task": "C3_task_080:P2",
+  "title": "GRPO 胜出：永久故障后走有效替代路径",
+  "records": [
+    {
+      "model": "GRPO",
+      "source": "runs/eval/qwen35_2b_grpo_vllm_test_20261027/episodes/C3_task_080_P2_00.json",
+      "snapshot": "reports/project/cases/05_grpo_win/grpo.json",
+      "sha256": "ee5cc8837ca3c625ae4003923e43a7046f7c5cb1cb67f40b2c990590217dacb2",
+      "official_pass": true,
+      "strict_pass": true,
+      "tool_calls": 7,
+      "invalid_actions": 0,
+      "validation_errors": 0,
+      "termination": "final_answer"
+    },
+    {
+      "model": "GiGPO",
+      "source": "runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/C3_task_080_P2_00.json",
+      "snapshot": "reports/project/cases/05_grpo_win/gigpo.json",
+      "sha256": "cb4ddf39b51f1dbf757d3f34a1fe63e3bffda274c17e89edaca4fd9bcaec9302",
+      "official_pass": false,
+      "strict_pass": false,
+      "tool_calls": 7,
+      "invalid_actions": 0,
+      "validation_errors": 0,
+      "termination": "final_answer"
+    }
+  ]
+}

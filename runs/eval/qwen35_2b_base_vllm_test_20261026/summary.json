@@ -1,0 +1,373 @@
+{
+  "official": {
+    "timestamp": "2026-10-26T14:00:31.811124",
+    "total_tasks": 200,
+    "tsr": {
+      "P0": 0.375,
+      "P1": 0.125,
+      "P2": 0.1,
+      "P3": 0.075,
+      "P4": 0.05
+    },
+    "prr": {
+      "P1": 0.2647058823529412,
+      "P2": 0.11363636363636363,
+      "P3": 0.12121212121212122,
+      "P4": 0.05263157894736842
+    },
+    "rc": {
+      "P1": 0.84375,
+      "P2": 0.8888888888888888,
+      "P3": 0.913978494623656,
+      "P4": 0.946236559139785
+    },
+    "insights": {
+      "validation_gap": "P4 PRR (5.26%) shows weak data validation capabilities after fault exposure"
+    },
+    "mode_breakdown": {
+      "P2": {
+        "total": 40,
+        "passed": 4,
+        "failed": 36,
+        "avg_tokens": 25870.775,
+        "min_tokens": 2777,
+        "max_tokens": 71315
+      },
+      "P1": {
+        "total": 40,
+        "passed": 5,
+        "failed": 35,
+        "avg_tokens": 29238.8,
+        "min_tokens": 2266,
+        "max_tokens": 86683
+      },
+      "P3": {
+        "total": 40,
+        "passed": 3,
+        "failed": 37,
+        "avg_tokens": 29938.025,
+        "min_tokens": 2865,
+        "max_tokens": 79466
+      },
+      "P4": {
+        "total": 40,
+        "passed": 2,
+        "failed": 38,
+        "avg_tokens": 29568.1,
+        "min_tokens": 3053,
+        "max_tokens": 88877
+      },
+      "P0": {
+        "total": 40,
+        "passed": 15,
+        "failed": 25,
+        "avg_tokens": 30404.2,
+        "min_tokens": 3026,
+        "max_tokens": 87136
+      }
+    },
+    "recovery_breakdown": {
+      "P1": {
+        "total": 40,
+        "hit_count": 32,
+        "no_hit_count": 8,
+        "hit_pass_count": 5,
+        "hit_fail_count": 27,
+        "prr_denominator": 34,
+        "prr_numerator": 9,
+        "rc_sample_count": 32,
+        "avg_actual_recovery_calls": 4.71875,
+        "avg_oracle_recovery_calls": 6.75
+      },
+      "P2": {
+        "total": 40,
+        "hit_count": 36,
+        "no_hit_count": 4,
+        "hit_pass_count": 4,
+        "hit_fail_count": 32,
+        "prr_denominator": 44,
+        "prr_numerator": 5,
+        "rc_sample_count": 36,
+        "avg_actual_recovery_calls": 5.333333333333333,
+        "avg_oracle_recovery_calls": 5.666666666666667
+      },
+      "P3": {
+        "total": 40,
+        "hit_count": 31,
+        "no_hit_count": 9,
+        "hit_pass_count": 3,
+        "hit_fail_count": 28,
+        "prr_denominator": 33,
+        "prr_numerator": 4,
+        "rc_sample_count": 31,
+        "avg_actual_recovery_calls": 5.548387096774194,
+        "avg_oracle_recovery_calls": 6.612903225806452
+      },
+      "P4": {
+        "total": 40,
+        "hit_count": 31,
+        "no_hit_count": 9,
+        "hit_pass_count": 2,
+        "hit_fail_count": 29,
+        "prr_denominator": 38,
+        "prr_numerator": 2,
+        "rc_sample_count": 31,
+        "avg_actual_recovery_calls": 5.225806451612903,
+        "avg_oracle_recovery_calls": 5.806451612903226
+      }
+    }
+  },
+  "breakdown": {
+    "all": {
+      "n": 200,
+      "official_pass_rate": 0.145,
+      "strict_pass_rate": 0.095,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 6.07,
+      "mean_tokens": 29003.98
+    },
+    "cell/C1/P0": {
+      "n": 10,
+      "official_pass_rate": 0.5,
+      "strict_pass_rate": 0.3,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 3.9,
+      "mean_tokens": 14239.6
+    },
+    "cell/C1/P1": {
+      "n": 10,
+      "official_pass_rate": 0.1,
+      "strict_pass_rate": 0.1,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 3.4,
+      "mean_tokens": 19011.4
+    },
+    "cell/C1/P2": {
+      "n": 10,
+      "official_pass_rate": 0.0,
+      "strict_pass_rate": 0.0,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 4.5,
+      "mean_tokens": 18312.6
+    },
+    "cell/C1/P3": {
+      "n": 10,
+      "official_pass_rate": 0.0,
+      "strict_pass_rate": 0.0,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 3.4,
+      "mean_tokens": 6784.6
+    },
+    "cell/C1/P4": {
+      "n": 10,
+      "official_pass_rate": 0.0,
+      "strict_pass_rate": 0.0,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 3.3,
+      "mean_tokens": 14035.8
+    },
+    "cell/C2/P0": {
+      "n": 10,
+      "official_pass_rate": 0.6,
+      "strict_pass_rate": 0.4,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 4.4,
+      "mean_tokens": 17918.3
+    },
+    "cell/C2/P1": {
+      "n": 10,
+      "official_pass_rate": 0.3,
+      "strict_pass_rate": 0.2,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 5.0,
+      "mean_tokens": 20509.9
+    },
+    "cell/C2/P2": {
+      "n": 10,
+      "official_pass_rate": 0.4,
+      "strict_pass_rate": 0.3,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 5.4,
+      "mean_tokens": 14840.9
+    },
+    "cell/C2/P3": {
+      "n": 10,
+      "official_pass_rate": 0.3,
+      "strict_pass_rate": 0.1,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 4.9,
+      "mean_tokens": 27856.1
+    },
+    "cell/C2/P4": {
+      "n": 10,
+      "official_pass_rate": 0.2,
+      "strict_pass_rate": 0.1,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 6.4,
+      "mean_tokens": 19155.9
+    },
+    "cell/C3/P0": {
+      "n": 10,
+      "official_pass_rate": 0.3,
+      "strict_pass_rate": 0.3,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 5.9,
+      "mean_tokens": 32018.2
+    },
+    "cell/C3/P1": {
+      "n": 10,
+      "official_pass_rate": 0.0,
+      "strict_pass_rate": 0.0,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 5.0,
+      "mean_tokens": 23298.7
+    },
+    "cell/C3/P2": {
+      "n": 10,
+      "official_pass_rate": 0.0,
+      "strict_pass_rate": 0.0,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 6.3,
+      "mean_tokens": 24615.4
+    },
+    "cell/C3/P3": {
+      "n": 10,
+      "official_pass_rate": 0.0,
+      "strict_pass_rate": 0.0,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 6.0,
+      "mean_tokens": 21759.9
+    },
+    "cell/C3/P4": {
+      "n": 10,
+      "official_pass_rate": 0.0,
+      "strict_pass_rate": 0.0,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 5.2,
+      "mean_tokens": 25019.8
+    },
+    "cell/C4/P0": {
+      "n": 10,
+      "official_pass_rate": 0.1,
+      "strict_pass_rate": 0.0,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 9.9,
+      "mean_tokens": 57440.7
+    },
+    "cell/C4/P1": {
+      "n": 10,
+      "official_pass_rate": 0.1,
+      "strict_pass_rate": 0.1,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 9.9,
+      "mean_tokens": 54135.2
+    },
+    "cell/C4/P2": {
+      "n": 10,
+      "official_pass_rate": 0.0,
+      "strict_pass_rate": 0.0,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 9.3,
+      "mean_tokens": 45714.2
+    },
+    "cell/C4/P3": {
+      "n": 10,
+      "official_pass_rate": 0.0,
+      "strict_pass_rate": 0.0,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 9.9,
+      "mean_tokens": 63351.5
+    },
+    "cell/C4/P4": {
+      "n": 10,
+      "official_pass_rate": 0.0,
+      "strict_pass_rate": 0.0,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 9.4,
+      "mean_tokens": 60060.9
+    },
+    "complexity/C1": {
+      "n": 50,
+      "official_pass_rate": 0.12,
+      "strict_pass_rate": 0.08,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 3.7,
+      "mean_tokens": 14476.8
+    },
+    "complexity/C2": {
+      "n": 50,
+      "official_pass_rate": 0.36,
+      "strict_pass_rate": 0.22,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 5.22,
+      "mean_tokens": 20056.22
+    },
+    "complexity/C3": {
+      "n": 50,
+      "official_pass_rate": 0.06,
+      "strict_pass_rate": 0.06,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 5.68,
+      "mean_tokens": 25342.4
+    },
+    "complexity/C4": {
+      "n": 50,
+      "official_pass_rate": 0.04,
+      "strict_pass_rate": 0.02,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 9.68,
+      "mean_tokens": 56140.5
+    },
+    "domain/Travel": {
+      "n": 75,
+      "official_pass_rate": 0.10666666666666667,
+      "strict_pass_rate": 0.06666666666666667,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 5.56,
+      "mean_tokens": 25117.02666666667
+    },
+    "mode/P0": {
+      "n": 40,
+      "official_pass_rate": 0.375,
+      "strict_pass_rate": 0.25,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 6.025,
+      "mean_tokens": 30404.2
+    },
+    "mode/P1": {
+      "n": 40,
+      "official_pass_rate": 0.125,
+      "strict_pass_rate": 0.1,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 5.825,
+      "mean_tokens": 29238.8
+    },
+    "mode/P2": {
+      "n": 40,
+      "official_pass_rate": 0.1,
+      "strict_pass_rate": 0.075,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 6.375,
+      "mean_tokens": 25870.775
+    },
+    "mode/P3": {
+      "n": 40,
+      "official_pass_rate": 0.075,
+      "strict_pass_rate": 0.025,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 6.05,
+      "mean_tokens": 29938.025
+    },
+    "mode/P4": {
+      "n": 40,
+      "official_pass_rate": 0.05,
+      "strict_pass_rate": 0.025,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 6.075,
+      "mean_tokens": 29568.1
+    }
+  },
+  "denominator": "All requested task/trial pairs, including infrastructure failures",
+  "metric_version": "Pinned ToolMaze commit; PRR is per unique fault hit; RC is exposure-conditioned",
+  "strict_pass": "Official pass AND explicit final answer AND no protocol/schema errors; not a complete semantic validator"
+}

@@ -1,0 +1,11 @@
+{
+  "completed": 200,
+  "total": 200,
+  "finished": true,
+  "replicas": 5,
+  "reused_completed": 58,
+  "official_pass": 29,
+  "strict_pass": 19,
+  "infrastructure_errors": 0,
+  "elapsed_seconds": 223.00048384803813
+}

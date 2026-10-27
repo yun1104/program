@@ -1,0 +1,16 @@
+{
+  "markdown_files": 10,
+  "local_links_checked": 84,
+  "broken_links": [],
+  "cases": 7,
+  "snapshots": 11,
+  "snapshot_hashes_match_originals": true,
+  "gigpo_training_batches": 80,
+  "gigpo_advantage_counts": {
+    "actions": 125425,
+    "noninitial_actions": 112625,
+    "shared_noninitial_actions": 58024,
+    "nonzero_noninitial_step_advantages": 33775
+  },
+  "metric_boundary_case_verified": true
+}

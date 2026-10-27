@@ -1,0 +1,40 @@
+{
+  "baseline": "runs/eval/qwen35_2b_base_vllm_test_20261026",
+  "candidate": "runs/eval/qwen35_2b_sft_vllm_test_20261026",
+  "n": 200,
+  "paired": {
+    "official_pass": {
+      "both_pass": 27,
+      "improved": 76,
+      "both_fail": 95,
+      "regressed": 2
+    },
+    "strict_pass": {
+      "both_pass": 18,
+      "improved": 64,
+      "both_fail": 117,
+      "regressed": 1
+    }
+  },
+  "baseline_all": {
+    "n": 200,
+    "official_pass_rate": 0.145,
+    "strict_pass_rate": 0.095,
+    "infrastructure_errors": 0,
+    "mean_tool_calls": 6.07,
+    "mean_tokens": 29003.98
+  },
+  "sft_all": {
+    "n": 200,
+    "official_pass_rate": 0.515,
+    "strict_pass_rate": 0.41,
+    "infrastructure_errors": 0,
+    "mean_tool_calls": 8.85,
+    "mean_tokens": 27669.595
+  },
+  "sft_termination_counts": {
+    "final_answer": 159,
+    "max_rounds": 39,
+    "context_budget": 2
+  }
+}

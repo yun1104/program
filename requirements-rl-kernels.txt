@@ -1,0 +1,4 @@
+# Project-local optional RL kernel; leave the existing CUDA/PyTorch environment intact.
+# python -m pip install --target .deps/rl --no-deps -r requirements-rl-kernels.txt
+liger-kernel==0.8.5
+# PEFT 0.21.0 is already installed in the sftrl environment.

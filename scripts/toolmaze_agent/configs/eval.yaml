@@ -1,0 +1,12 @@
+project_config: scripts/toolmaze_agent/configs/project.yaml
+split: test
+trials: 3
+seed: 20261026
+output: runs/eval/base
+backend: hf
+model: models/Qwen3.5-2B
+dtype: bfloat16
+generation:
+  temperature: 0.8
+  max_tokens: 512
+  max_context_tokens: 8192

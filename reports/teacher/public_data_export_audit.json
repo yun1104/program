@@ -1,0 +1,35 @@
+{
+  "scope": {
+    "training_instances": 1600,
+    "attempts": 1,
+    "max_tool_rounds": 16,
+    "workers": 64,
+    "validation_or_test_sent": false,
+    "total_instances_unchanged": true
+  },
+  "destination": "https://opencode.ai/inference/go/anthropic/v1/messages",
+  "model": "deepseek-v4.1-flash",
+  "public_dataset_url": "https://huggingface.co/datasets/dongsheng/ToolMaze",
+  "dataset_commit": "08b0239a98b0b07839d673f5bc0ef7d836db9296",
+  "public_task_files_unmodified": true,
+  "all_task_hashes_verified": true,
+  "public_tool_runtime_url": "https://github.com/Zhudongsheng75/ToolMaze",
+  "plugins_scanned": 272,
+  "plugin_file_network_env_read_patterns_found": [],
+  "exported_payload_fields": [
+    "public task query",
+    "public tool descriptions and JSON schemas",
+    "teacher generated tool calls",
+    "actual simulated tool results"
+  ],
+  "not_in_payload": [
+    "API credentials",
+    "environment file contents",
+    "private task gold/fault metadata",
+    "workspace files"
+  ],
+  "credential_in_pilot_artifacts": false,
+  "credential_transport": "Bearer header sent only to the user-specified endpoint",
+  "bulk_launch_state": "started_after_approval_review_of_public_data_evidence",
+  "launch_receipt": "reports/teacher/collection_launch.json"
+}

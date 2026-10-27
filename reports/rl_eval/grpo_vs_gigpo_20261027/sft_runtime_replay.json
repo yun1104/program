@@ -1,0 +1,8 @@
+{
+  "run": "runs/eval/qwen35_2b_sft_vllm_test_20261026",
+  "checked": 200,
+  "failures": [],
+  "method": "Replay every saved action; require identical prompt, observations, action text and outcome. No LLM resampling.",
+  "reference_manifest_identity": "42f1e5d470cb32eb4f4c27864a95e351c0a1e1f46da92affb8daa0a0aaa47501",
+  "current_rollout_sha256": "70fcf86b94711305e90106627c1cf9818ab550b1d600e7e37f55a258d9924d03"
+}

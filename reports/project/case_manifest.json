@@ -1,0 +1,179 @@
+{
+  "selection": "Post-hoc qualitative examples; no resampling, no performance reweighting",
+  "cases": [
+    {
+      "slug": "01_retry",
+      "task": "C2_task_100:P1",
+      "records": [
+        {
+          "model": "SFT",
+          "source": "runs/eval/qwen35_2b_sft_vllm_test_20261026/episodes/C2_task_100_P1_00.json",
+          "snapshot": "reports/project/cases/01_retry/sft.json",
+          "sha256": "b7086d2053a5a2319bbfe1ddd2de620e5157bb51b73eb0e3c76a2b5f2768cd10",
+          "official_pass": false,
+          "strict_pass": false,
+          "tool_calls": 16,
+          "invalid_actions": 0,
+          "validation_errors": 1,
+          "termination": "max_rounds"
+        },
+        {
+          "model": "GRPO",
+          "source": "runs/eval/qwen35_2b_grpo_vllm_test_20261027/episodes/C2_task_100_P1_00.json",
+          "snapshot": "reports/project/cases/01_retry/grpo.json",
+          "sha256": "2c896198a3fb2937c682829453745eee728bd5dece14b09240541647c64a2b86",
+          "official_pass": true,
+          "strict_pass": true,
+          "tool_calls": 7,
+          "invalid_actions": 0,
+          "validation_errors": 0,
+          "termination": "final_answer"
+        }
+      ]
+    },
+    {
+      "slug": "02_stop",
+      "task": "C1_task_041:P2",
+      "records": [
+        {
+          "model": "GiGPO",
+          "source": "runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/C1_task_041_P2_00.json",
+          "snapshot": "reports/project/cases/02_stop/gigpo.json",
+          "sha256": "6e820fa2f3b3d36023dbef80aa5d56bae9ea31031937c49f236da7f0d8927eff",
+          "official_pass": true,
+          "strict_pass": true,
+          "tool_calls": 9,
+          "invalid_actions": 0,
+          "validation_errors": 0,
+          "termination": "final_answer"
+        }
+      ]
+    },
+    {
+      "slug": "03_transient_corruption",
+      "task": "C1_task_008:P3",
+      "records": [
+        {
+          "model": "GRPO",
+          "source": "runs/eval/qwen35_2b_grpo_vllm_test_20261027/episodes/C1_task_008_P3_00.json",
+          "snapshot": "reports/project/cases/03_transient_corruption/grpo.json",
+          "sha256": "7ac7a60ed8ef19cd71ccb07eec59e54f5a66e1ee67d55ac05fda961bf6e97111",
+          "official_pass": true,
+          "strict_pass": true,
+          "tool_calls": 6,
+          "invalid_actions": 0,
+          "validation_errors": 0,
+          "termination": "final_answer"
+        }
+      ]
+    },
+    {
+      "slug": "04_gigpo_win",
+      "task": "C3_task_094:P3",
+      "records": [
+        {
+          "model": "GRPO",
+          "source": "runs/eval/qwen35_2b_grpo_vllm_test_20261027/episodes/C3_task_094_P3_00.json",
+          "snapshot": "reports/project/cases/04_gigpo_win/grpo.json",
+          "sha256": "06e00dedf2fbf08a7cefc21f9569a855645b782e44a48ceb8d2edfb6ba739d49",
+          "official_pass": false,
+          "strict_pass": false,
+          "tool_calls": 7,
+          "invalid_actions": 0,
+          "validation_errors": 0,
+          "termination": "final_answer"
+        },
+        {
+          "model": "GiGPO",
+          "source": "runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/C3_task_094_P3_00.json",
+          "snapshot": "reports/project/cases/04_gigpo_win/gigpo.json",
+          "sha256": "4c040b1a5c700ac9a49a42c2752364526ce550730edec887162680fc6640ac0d",
+          "official_pass": true,
+          "strict_pass": true,
+          "tool_calls": 7,
+          "invalid_actions": 0,
+          "validation_errors": 0,
+          "termination": "final_answer"
+        }
+      ]
+    },
+    {
+      "slug": "05_grpo_win",
+      "task": "C3_task_080:P2",
+      "records": [
+        {
+          "model": "GRPO",
+          "source": "runs/eval/qwen35_2b_grpo_vllm_test_20261027/episodes/C3_task_080_P2_00.json",
+          "snapshot": "reports/project/cases/05_grpo_win/grpo.json",
+          "sha256": "ee5cc8837ca3c625ae4003923e43a7046f7c5cb1cb67f40b2c990590217dacb2",
+          "official_pass": true,
+          "strict_pass": true,
+          "tool_calls": 7,
+          "invalid_actions": 0,
+          "validation_errors": 0,
+          "termination": "final_answer"
+        },
+        {
+          "model": "GiGPO",
+          "source": "runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/C3_task_080_P2_00.json",
+          "snapshot": "reports/project/cases/05_grpo_win/gigpo.json",
+          "sha256": "cb4ddf39b51f1dbf757d3f34a1fe63e3bffda274c17e89edaca4fd9bcaec9302",
+          "official_pass": false,
+          "strict_pass": false,
+          "tool_calls": 7,
+          "invalid_actions": 0,
+          "validation_errors": 0,
+          "termination": "final_answer"
+        }
+      ]
+    },
+    {
+      "slug": "06_shared_failure",
+      "task": "C1_task_041:P4",
+      "records": [
+        {
+          "model": "GRPO",
+          "source": "runs/eval/qwen35_2b_grpo_vllm_test_20261027/episodes/C1_task_041_P4_00.json",
+          "snapshot": "reports/project/cases/06_shared_failure/grpo.json",
+          "sha256": "1277ac27eb19f9b19707c5e924828f286f3ba2cc8c0d5a043cd1ad08f805ef0f",
+          "official_pass": false,
+          "strict_pass": false,
+          "tool_calls": 5,
+          "invalid_actions": 0,
+          "validation_errors": 0,
+          "termination": "final_answer"
+        },
+        {
+          "model": "GiGPO",
+          "source": "runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/C1_task_041_P4_00.json",
+          "snapshot": "reports/project/cases/06_shared_failure/gigpo.json",
+          "sha256": "e9cd46018412892673f2dc8c03438ab737bd63e5375a958a678e10de8e12d32c",
+          "official_pass": false,
+          "strict_pass": false,
+          "tool_calls": 5,
+          "invalid_actions": 0,
+          "validation_errors": 0,
+          "termination": "final_answer"
+        }
+      ]
+    },
+    {
+      "slug": "07_metric_boundary",
+      "task": "C1_task_088:P2",
+      "records": [
+        {
+          "model": "GiGPO",
+          "source": "runs/eval/qwen35_2b_gigpo_vllm_test_20261027/episodes/C1_task_088_P2_00.json",
+          "snapshot": "reports/project/cases/07_metric_boundary/gigpo.json",
+          "sha256": "37f272f8f34965c0c35abf7e8af916824d94053c9f7e629ec35d04ecb47d07cc",
+          "official_pass": true,
+          "strict_pass": true,
+          "tool_calls": 9,
+          "invalid_actions": 0,
+          "validation_errors": 0,
+          "termination": "final_answer"
+        }
+      ]
+    }
+  ]
+}

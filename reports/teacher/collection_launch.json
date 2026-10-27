@@ -1,0 +1,26 @@
+{
+  "pid": 334328,
+  "started_at": "2026-10-26T14:37:39.608821+08:00",
+  "command": [
+    "/home/ruanwenxuan/miniconda3/envs/sftrl/bin/python",
+    "-u",
+    "tools/run_teacher.py",
+    "--workers",
+    "64",
+    "--attempts",
+    "1",
+    "--log",
+    "reports/teacher/opencode_v41_flash_native_v2_collection.log"
+  ],
+  "planned_train_instances": 1600,
+  "attempts": 1,
+  "workers": 64,
+  "model": "deepseek-v4.1-flash",
+  "base_url": "https://opencode.ai/inference/go/anthropic",
+  "output": "runs/teacher/opencode_v41_flash_20261026_native_v2",
+  "credentials_logged": false,
+  "public_data_audit": "reports/teacher/public_data_export_audit.json",
+  "resumed_completed": 171,
+  "previous_workers": 8,
+  "concurrency_change_authorized_by_user": true
+}

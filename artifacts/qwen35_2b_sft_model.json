@@ -1,0 +1,17 @@
+{
+  "parent_model_manifest": "artifacts/qwen35_2b_baseline_model.json",
+  "training_manifest": "runs/sft_full_trl_20261026/manifest.json",
+  "actual_path": "/home/ruanwenxuan/program/runs/sft_full_trl_20261026/checkpoint-54",
+  "weights": {
+    "model.safetensors": {
+      "bytes": 5443677680,
+      "sha256": "63ea1bbf17757c4473ad87af137de5ddec1450ef50552b417d86a6d1ebbf534e"
+    }
+  },
+  "metadata_sha256": {
+    "config.json": "0aeed9aaacf8bd1856a6f0b4ee6982c6ea2aae3e45993f543955693543ee0dc8",
+    "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+    "tokenizer_config.json": "66e427c470fe580fe8c7b5725d857af23d8417e37fae62667ec698306a19987b",
+    "chat_template.jinja": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80"
+  }
+}

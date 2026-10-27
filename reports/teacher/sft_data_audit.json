@@ -1,0 +1,25 @@
+{
+  "teacher_accepted": 782,
+  "fits_8192": 782,
+  "overlength": [],
+  "length_min": 1517,
+  "length_median": 2749,
+  "length_p95": 5239,
+  "length_max": 7164,
+  "supervised_tokens_within_8192": 614303,
+  "accepted_by_mode": {
+    "P0": 226,
+    "P1": 234,
+    "P3": 125,
+    "P2": 119,
+    "P4": 78
+  },
+  "rl_training_tasks": 1600,
+  "rl_tasks_with_sft_trajectory": 782,
+  "rl_tasks_without_sft_trajectory": 818,
+  "validation_tasks": 200,
+  "test_tasks": 200,
+  "train_vs_validation_test_group_overlap": 0,
+  "sft_file": "runs/sft_data/train.jsonl",
+  "policy": "SFT and RL may share train tasks; RL must generate fresh student rollouts; validation/test never used for either training stage"
+}

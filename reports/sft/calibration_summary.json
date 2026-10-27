@@ -1,0 +1,51 @@
+{
+  "selected_batch_per_gpu": 6,
+  "note": "Two-step longest-trajectory stress tests; first step includes kernel warmup. Second steps have different sequence lengths; this is a tuning estimate, not a controlled benchmark.",
+  "runs": [
+    {
+      "batch_per_gpu": 4,
+      "world_size": 5,
+      "run": "runs/sft_calibration_mb4_v2",
+      "second_step_seconds": 8.264699999999976,
+      "second_step_input_tokens": 107744,
+      "second_step_input_tokens_per_second": 13036.649848149395,
+      "peak_allocated_gib": [
+        15.221469402313232,
+        15.212573051452637,
+        15.0307936668396,
+        15.254193305969238,
+        15.520540237426758
+      ]
+    },
+    {
+      "batch_per_gpu": 6,
+      "world_size": 5,
+      "run": "runs/sft_calibration_mb6",
+      "second_step_seconds": 10.991199999999992,
+      "second_step_input_tokens": 155820,
+      "second_step_input_tokens_per_second": 14176.795982240348,
+      "peak_allocated_gib": [
+        18.043269634246826,
+        17.725209712982178,
+        17.606887340545654,
+        17.486579418182373,
+        17.70918035507202
+      ]
+    },
+    {
+      "batch_per_gpu": 8,
+      "world_size": 5,
+      "run": "runs/sft_calibration_mb8",
+      "second_step_seconds": 86.7633,
+      "second_step_input_tokens": 199112,
+      "second_step_input_tokens_per_second": 2294.8873544459466,
+      "peak_allocated_gib": [
+        21.833016395568848,
+        20.09109401702881,
+        19.77060317993164,
+        19.446287631988525,
+        19.6535587310791
+      ]
+    }
+  ]
+}

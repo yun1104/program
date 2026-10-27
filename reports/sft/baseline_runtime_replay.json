@@ -1,0 +1,6 @@
+{
+  "run": "runs/eval/qwen35_2b_base_vllm_test_20261026",
+  "checked": 200,
+  "failures": [],
+  "method": "Replay every saved action; require identical prompt, observations, action text and outcome. No LLM resampling."
+}

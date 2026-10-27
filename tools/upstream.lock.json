@@ -1,0 +1,12 @@
+{
+  "toolmaze": {
+    "url": "https://github.com/Zhudongsheng75/ToolMaze.git",
+    "revision": "f8620d841b67a72ac921caee9df87af6ab9befbb",
+    "path": "tools/ToolMaze"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/dongsheng/ToolMaze",
+    "revision": "08b0239a98b0b07839d673f5bc0ef7d836db9296",
+    "path": "data/toolmaze"
+  }
+}

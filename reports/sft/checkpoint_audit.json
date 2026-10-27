@@ -1,0 +1,27 @@
+{
+  "shared_tensor_shapes_identical": true,
+  "omitted_base_auxiliary_tensors": [
+    "mtp.fc.weight",
+    "mtp.layers.0.input_layernorm.weight",
+    "mtp.layers.0.mlp.down_proj.weight",
+    "mtp.layers.0.mlp.gate_proj.weight",
+    "mtp.layers.0.mlp.up_proj.weight",
+    "mtp.layers.0.post_attention_layernorm.weight",
+    "mtp.layers.0.self_attn.k_norm.weight",
+    "mtp.layers.0.self_attn.k_proj.weight",
+    "mtp.layers.0.self_attn.o_proj.weight",
+    "mtp.layers.0.self_attn.q_norm.weight",
+    "mtp.layers.0.self_attn.q_proj.weight",
+    "mtp.layers.0.self_attn.v_proj.weight",
+    "mtp.norm.weight",
+    "mtp.pre_fc_norm_embedding.weight",
+    "mtp.pre_fc_norm_hidden.weight"
+  ],
+  "additional_tensor": [
+    "lm_head.weight"
+  ],
+  "tied_embedding_and_head_equal": true,
+  "updated_language_tensor": "model.language_model.layers.0.linear_attn.in_proj_qkv.weight",
+  "language_weight_changed": true,
+  "note": "HF Qwen3.5 training architecture omits auxiliary MTP tensors; speculative decoding is disabled in both vLLM evaluations."
+}

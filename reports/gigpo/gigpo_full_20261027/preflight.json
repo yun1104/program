@@ -1,0 +1,19 @@
+{
+  "train_tasks": 1600,
+  "world_size": 5,
+  "effective_batch_size": 160,
+  "groups_per_update": 20,
+  "expected_total_trajectories": 12800,
+  "mode_counts": {
+    "P0": 320,
+    "P1": 320,
+    "P2": 320,
+    "P3": 320,
+    "P4": 320
+  },
+  "trainable_parameters": 67276800,
+  "all_rows_train": true,
+  "base_model": "/home/ruanwenxuan/program/runs/sft_full_trl_20261026/checkpoint-54",
+  "original_grpo_sources_unchanged": true,
+  "eight_unit_tests_passed": true
+}

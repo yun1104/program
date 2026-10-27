@@ -1,0 +1,31 @@
+{
+  "original_requested_model": "deepseek-v4.1-flash[1m]",
+  "original_error": "HTTP 400: Model is unavailable",
+  "checks": [
+    {
+      "operation": "model_catalog",
+      "path": "v1/models",
+      "http_status": 404
+    },
+    {
+      "operation": "model_catalog",
+      "path": "models",
+      "http_status": 404
+    },
+    {
+      "operation": "same_family_alias_probe",
+      "requested_model": "deepseek-v4.1-flash",
+      "resolved_models": [
+        "deepseek-v4.1-flash"
+      ],
+      "response_text": "{\"ready\":true}",
+      "usage": {
+        "input_tokens": 26,
+        "output_tokens": 5
+      },
+      "provider_request_id": "ca29f074c89801ddb9b583f612ac524a",
+      "ready": true
+    }
+  ],
+  "credentials_logged": false
+}

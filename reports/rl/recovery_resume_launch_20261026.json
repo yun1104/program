@@ -1,0 +1,16 @@
+{
+  "pid": 2559907,
+  "command": [
+    "/home/ruanwenxuan/miniconda3/envs/sftrl/bin/python",
+    "tools/run_rl.py",
+    "--gpus",
+    "0,3,5,6",
+    "--sampler-gpu",
+    "7",
+    "--config",
+    "scripts/toolmaze_agent/configs/rl_lora_recovery.yaml",
+    "--resume",
+    "runs/grpo_lora_recovery_20261026/checkpoint-2"
+  ],
+  "started_at_unix": 1793014911.8973105
+}

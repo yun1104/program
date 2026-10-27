@@ -1,0 +1,24 @@
+/home/ruanwenxuan/miniconda3/envs/sftrl/lib/python3.10/site-packages/trl/generation/__init__.py:22: UserWarning: TRL currently supports vLLM versions from 0.19.1 to 0.28.0. You have version 0.29.0 installed. We recommend installing a supported version to avoid compatibility issues.
+  if is_vllm_available():
+/home/ruanwenxuan/miniconda3/envs/sftrl/lib/python3.10/site-packages/trl/generation/vllm_client.py:43: UserWarning: TRL currently supports vLLM versions from 0.19.1 to 0.28.0. You have version 0.29.0 installed. We recommend installing a supported version to avoid compatibility issues.
+  if is_vllm_available():
+/home/ruanwenxuan/miniconda3/envs/sftrl/lib/python3.10/site-packages/trl/generation/vllm_client.py:49: UserWarning: TRL currently supports vLLM versions from 0.19.1 to 0.28.0. You have version 0.29.0 installed. We recommend installing a supported version to avoid compatibility issues.
+  _HAS_STATEFUL_TRAINER_ENGINE = is_vllm_available(min_version="0.28.0")
+/home/ruanwenxuan/miniconda3/envs/sftrl/lib/python3.10/site-packages/torch/cuda/__init__.py:1112: UserWarning: Can't initialize NVML
+  raw_cnt = _raw_device_count_nvml()
+/home/ruanwenxuan/miniconda3/envs/sftrl/lib/python3.10/site-packages/torch/cuda/__init__.py:1170: UserWarning: CUDA initialization: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 304: OS call failed or operation not supported on this OS (Triggered internally at /__w/pytorch/pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  r = torch._C._cuda_getDeviceCount() if nvml_count < 0 else nvml_count
+/home/ruanwenxuan/miniconda3/envs/sftrl/lib/python3.10/site-packages/trl/generation/vllm_client.py:58: UserWarning: TRL currently supports vLLM versions from 0.19.1 to 0.28.0. You have version 0.29.0 installed. We recommend installing a supported version to avoid compatibility issues.
+  _HAS_WEIGHT_UPDATE_LIFECYCLE = is_vllm_available(min_version="0.21.0")
+/home/ruanwenxuan/miniconda3/envs/sftrl/lib/python3.10/site-packages/trl/generation/vllm_generation.py:42: UserWarning: TRL currently supports vLLM versions from 0.19.1 to 0.28.0. You have version 0.29.0 installed. We recommend installing a supported version to avoid compatibility issues.
+  if is_vllm_available():
+/home/ruanwenxuan/miniconda3/envs/sftrl/lib/python3.10/site-packages/torch/cuda/__init__.py:1112: UserWarning: Can't initialize NVML
+  raw_cnt = _raw_device_count_nvml()
+W1026 19:39:29.252000 4 site-packages/torch/utils/cpp_extension.py:178] No CUDA runtime is found, using CUDA_HOME='/usr'
+/home/ruanwenxuan/miniconda3/envs/sftrl/lib/python3.10/site-packages/torch/cuda/__init__.py:1112: UserWarning: Can't initialize NVML
+  raw_cnt = _raw_device_count_nvml()
+Sampler RPC retry 1/4: RemoteProtocolError; same prompt and seed
+----------------------------------------------------------------------
+Ran 9 tests in 28.847s
+
+OK

@@ -1,0 +1,28 @@
+seed: 20261026
+model: models/Qwen3.5-2B
+data: runs/sft_data/train.jsonl
+output: runs/sft_full
+dtype: bfloat16
+freeze_vision: true
+max_length: 8192
+training:
+  num_train_epochs: 2
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 4
+  learning_rate: 0.00001
+  weight_decay: 0.01
+  warmup_ratio: 0.05
+  lr_scheduler_type: cosine
+  bf16: true
+  gradient_checkpointing: true
+  gradient_checkpointing_kwargs:
+    use_reentrant: false
+  max_grad_norm: 1.0
+  logging_steps: 1
+  save_strategy: steps
+  save_steps: 50
+  save_total_limit: 2
+  report_to: none
+  optim: adamw_torch
+  ddp_find_unused_parameters: false
+  deepspeed: scripts/toolmaze_agent/configs/zero2_offload.json

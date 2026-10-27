@@ -1,0 +1,30 @@
+{
+  "requested_at": "2026-10-26T14:36:22.347218+08:00",
+  "old_launcher_pid": 292254,
+  "old_collector_pid": 292310,
+  "before": {
+    "state": "running",
+    "planned": 1600,
+    "total": 163,
+    "accepted": 93,
+    "infrastructure_errors": 0,
+    "accepted_by_mode": {
+      "P0": 27,
+      "P1": 27,
+      "P2": 17,
+      "P4": 9,
+      "P3": 13
+    },
+    "input_tokens": 2300243,
+    "output_tokens": 169500,
+    "workers": 8,
+    "attempts": 1,
+    "elapsed_seconds": 348.35596805706155
+  },
+  "new_workers": 64,
+  "same_tasks_model_and_sampling": true,
+  "stop_method": "SIGINT to collector main thread; wait for bounded in-flight futures to finish and save",
+  "new_launcher_pid": 334328,
+  "drained_completed": 171,
+  "restarted_at": "2026-10-26T14:37:39.608821+08:00"
+}

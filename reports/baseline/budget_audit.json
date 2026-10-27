@@ -1,0 +1,25 @@
+{
+  "P0_shortest_path_tool_calls": {
+    "C1": {
+      "min": 5,
+      "max": 5,
+      "n": 10
+    },
+    "C3": {
+      "min": 6,
+      "max": 7,
+      "n": 10
+    },
+    "C2": {
+      "min": 5,
+      "max": 6,
+      "n": 10
+    },
+    "C4": {
+      "min": 9,
+      "max": 12,
+      "n": 10
+    }
+  },
+  "P0_exceeding_16_rounds_including_final": []
+}

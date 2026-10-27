@@ -1,0 +1,16 @@
+{
+  "state": "complete",
+  "step": 54,
+  "total_steps": 54,
+  "epoch": 2.0,
+  "metrics": {
+    "train_runtime": 677.8676,
+    "train_samples_per_second": 2.307,
+    "train_steps_per_second": 0.08,
+    "total_flos": 5.341793620276019e+16,
+    "train_loss": 0.302965574518398,
+    "epoch": 2.0,
+    "num_input_tokens_seen": 5229906
+  },
+  "model": "/home/ruanwenxuan/program/runs/sft_full_trl_20261026/final"
+}

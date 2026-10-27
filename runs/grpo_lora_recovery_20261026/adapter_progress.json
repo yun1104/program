@@ -1,0 +1,6 @@
+{
+  "step": 100,
+  "initial_lora_b_l2": 0.008541394025087357,
+  "current_lora_b_l2": 0.4100183844566345,
+  "adapter_updated": true
+}

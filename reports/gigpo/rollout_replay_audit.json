@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "source": "/home/ruanwenxuan/program/runs/grpo_lora_recovery_20261026/rollouts/00000000.json",
+      "row": "C3_task_086:P2",
+      "match": true,
+      "actions": 11,
+      "strict_pass": true
+    },
+    {
+      "source": "/home/ruanwenxuan/program/runs/grpo_lora_recovery_20261026/rollouts/00000001.json",
+      "row": "C3_task_086:P2",
+      "match": true,
+      "actions": 16,
+      "strict_pass": false
+    },
+    {
+      "source": "/home/ruanwenxuan/program/runs/grpo_lora_recovery_20261026/rollouts/00000002.json",
+      "row": "C3_task_086:P2",
+      "match": true,
+      "actions": 16,
+      "strict_pass": false
+    },
+    {
+      "source": "/home/ruanwenxuan/program/runs/grpo_lora_recovery_20261026/rollouts/00000003.json",
+      "row": "C3_task_086:P2",
+      "match": true,
+      "actions": 16,
+      "strict_pass": false
+    },
+    {
+      "source": "/home/ruanwenxuan/program/runs/grpo_lora_recovery_20261026/rollouts/00000004.json",
+      "row": "C3_task_086:P2",
+      "match": true,
+      "actions": 10,
+      "strict_pass": false
+    },
+    {
+      "source": "/home/ruanwenxuan/program/runs/grpo_lora_recovery_20261026/rollouts/00000005.json",
+      "row": "C3_task_086:P2",
+      "match": true,
+      "actions": 11,
+      "strict_pass": false
+    },
+    {
+      "source": "/home/ruanwenxuan/program/runs/grpo_lora_recovery_20261026/rollouts/00000006.json",
+      "row": "C3_task_086:P2",
+      "match": true,
+      "actions": 12,
+      "strict_pass": false
+    },
+    {
+      "source": "/home/ruanwenxuan/program/runs/grpo_lora_recovery_20261026/rollouts/00000007.json",
+      "row": "C3_task_086:P2",
+      "match": true,
+      "actions": 16,
+      "strict_pass": false
+    }
+  ]
+}

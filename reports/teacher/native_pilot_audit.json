@@ -1,0 +1,24 @@
+{
+  "model": "deepseek-v4.1-flash",
+  "pilot_total": 5,
+  "accepted": 2,
+  "infrastructure_errors": 0,
+  "checks": [
+    {
+      "id": "C3_task_015:P0",
+      "tool_calls": 8,
+      "actual_result_match": true,
+      "student_tokens": 3777,
+      "supervised_tokens": 975
+    },
+    {
+      "id": "C3_task_015:P1",
+      "tool_calls": 9,
+      "actual_result_match": true,
+      "student_tokens": 3522,
+      "supervised_tokens": 792
+    }
+  ],
+  "native_tool_results_match_actual_environment": true,
+  "credentials_not_recorded": true
+}
