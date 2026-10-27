@@ -1,0 +1,36 @@
+project_config: scripts/toolmaze_agent/configs/project_eval_rounds25.yaml
+split: test
+trials: 1
+seed: 20261026
+output: runs/eval/qwen35_2b_grpo_vllm_test_rounds25_20261027
+backend: vllm
+model: .cache/rl_eval/grpo_final_rounds25_20261027
+model_manifest: artifacts/qwen35_2b_grpo_model_rounds25_20261027.json
+dtype: bfloat16
+workers: 64
+generation:
+  temperature: 0.8
+  max_tokens: 512
+  max_context_tokens: 8192
+vllm:
+  tensor_parallel_size: 1
+  gpu_memory_utilization: 0.9
+  enforce_eager: false
+  max_num_seqs: 64
+  max_num_batched_tokens: 16384
+  continuous_batching: true
+  schema_cache: true
+  compilation_config:
+    mode: 0
+    cudagraph_mode: FULL_DECODE_ONLY
+    cudagraph_capture_sizes:
+    - 1
+    - 2
+    - 4
+    - 8
+    - 16
+    - 24
+    - 32
+    - 40
+    - 48
+    - 64

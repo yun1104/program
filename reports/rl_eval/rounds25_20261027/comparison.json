@@ -1,0 +1,170 @@
+{
+  "max_rounds": 25,
+  "n": 200,
+  "metrics": {
+    "base": {
+      "n": 200,
+      "official_pass_rate": 0.13,
+      "strict_pass_rate": 0.065,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 7.26,
+      "mean_tokens": 53571.335
+    },
+    "sft": {
+      "n": 200,
+      "official_pass_rate": 0.53,
+      "strict_pass_rate": 0.44,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 9.565,
+      "mean_tokens": 34076.235
+    },
+    "grpo": {
+      "n": 200,
+      "official_pass_rate": 0.55,
+      "strict_pass_rate": 0.525,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 8.485,
+      "mean_tokens": 27034.81
+    },
+    "gigpo": {
+      "n": 200,
+      "official_pass_rate": 0.57,
+      "strict_pass_rate": 0.535,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 8.665,
+      "mean_tokens": 27761.005
+    }
+  },
+  "historical_16_metrics": {
+    "base": {
+      "n": 200,
+      "official_pass_rate": 0.145,
+      "strict_pass_rate": 0.095,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 6.07,
+      "mean_tokens": 29003.98
+    },
+    "sft": {
+      "n": 200,
+      "official_pass_rate": 0.515,
+      "strict_pass_rate": 0.41,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 8.85,
+      "mean_tokens": 27669.595
+    },
+    "grpo": {
+      "n": 200,
+      "official_pass_rate": 0.55,
+      "strict_pass_rate": 0.525,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 8.28,
+      "mean_tokens": 25217.045
+    },
+    "gigpo": {
+      "n": 200,
+      "official_pass_rate": 0.56,
+      "strict_pass_rate": 0.515,
+      "infrastructure_errors": 0,
+      "mean_tool_calls": 8.565,
+      "mean_tokens": 26272.56
+    }
+  },
+  "budget_transitions": {
+    "base": {
+      "old_max_rounds": 81,
+      "old_capped_now_official_pass": 9,
+      "old_capped_now_strict_pass": 1,
+      "strict_gained": 1,
+      "strict_lost": 7,
+      "complete_old_action_sequence_is_exact_prefix_of_new": 62
+    },
+    "sft": {
+      "old_max_rounds": 39,
+      "old_capped_now_official_pass": 11,
+      "old_capped_now_strict_pass": 3,
+      "strict_gained": 10,
+      "strict_lost": 4,
+      "complete_old_action_sequence_is_exact_prefix_of_new": 33
+    },
+    "grpo": {
+      "old_max_rounds": 13,
+      "old_capped_now_official_pass": 3,
+      "old_capped_now_strict_pass": 1,
+      "strict_gained": 2,
+      "strict_lost": 2,
+      "complete_old_action_sequence_is_exact_prefix_of_new": 44
+    },
+    "gigpo": {
+      "old_max_rounds": 26,
+      "old_capped_now_official_pass": 6,
+      "old_capped_now_strict_pass": 3,
+      "strict_gained": 7,
+      "strict_lost": 3,
+      "complete_old_action_sequence_is_exact_prefix_of_new": 42
+    }
+  },
+  "behavior": {
+    "base": {
+      "terminations": {
+        "final_answer": 100,
+        "max_rounds": 91,
+        "context_budget": 9
+      },
+      "protocol_error_episodes": 130,
+      "schema_error_episodes": 22,
+      "max_model_decisions": 25
+    },
+    "sft": {
+      "terminations": {
+        "final_answer": 172,
+        "max_rounds": 14,
+        "context_budget": 14
+      },
+      "protocol_error_episodes": 53,
+      "schema_error_episodes": 16,
+      "max_model_decisions": 25
+    },
+    "grpo": {
+      "terminations": {
+        "final_answer": 191,
+        "max_rounds": 5,
+        "context_budget": 4
+      },
+      "protocol_error_episodes": 21,
+      "schema_error_episodes": 6,
+      "max_model_decisions": 25
+    },
+    "gigpo": {
+      "terminations": {
+        "final_answer": 191,
+        "context_budget": 7,
+        "max_rounds": 2
+      },
+      "protocol_error_episodes": 24,
+      "schema_error_episodes": 9,
+      "max_model_decisions": 25
+    }
+  },
+  "paired_grpo_vs_gigpo": {
+    "official_pass": {
+      "both_pass": 101,
+      "both_fail": 77,
+      "gigpo_only": 13,
+      "grpo_only": 9
+    },
+    "strict_pass": {
+      "both_pass": 94,
+      "both_fail": 82,
+      "gigpo_only": 13,
+      "grpo_only": 11
+    }
+  },
+  "runs": {
+    "base": "runs/eval/qwen35_2b_base_vllm_test_rounds25_20261027",
+    "sft": "runs/eval/qwen35_2b_sft_vllm_test_rounds25_20261027",
+    "grpo": "runs/eval/qwen35_2b_grpo_vllm_test_rounds25_20261027",
+    "gigpo": "runs/eval/qwen35_2b_gigpo_vllm_test_rounds25_20261027"
+  },
+  "scope": "Fresh rerun of all 800 model/task pairs. Only evaluation decision limit changes to 25; existing weights retain their original 16-round training/collection budget.",
+  "official_alignment": "Aligns the pinned official execution.max_rounds=25. Student JSON single-action protocol and 8192 context/512 action tokens remain project-specific; not a full reproduction of the official inference setup."
+}

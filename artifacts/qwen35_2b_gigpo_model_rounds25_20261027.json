@@ -1,0 +1,22 @@
+{
+  "base_model": "/home/ruanwenxuan/program/runs/sft_full_trl_20261026/checkpoint-54",
+  "adapter": "/home/ruanwenxuan/program/runs/gigpo_full_20261027/final",
+  "adapter_sha256": "f495e5f341d42c3aa197c0dd6b12ae38102e6b6ca0ab5c9f17e6ca8f088e9500",
+  "base_model_manifest": "artifacts/qwen35_2b_sft_model.json",
+  "merge": "Training sampler formula: (base.float() + delta.float()).to(BF16); unload without a second merge",
+  "merged_lora_layers": 186,
+  "temporary_merged_path": "/home/ruanwenxuan/program/.cache/rl_eval/gigpo_final_rounds25_20261027",
+  "weights": {
+    "model.safetensors": {
+      "bytes": 4426558864,
+      "sha256": "f0de6b3b08197e31d70acf79c0fa3ece0f4c334f7999d31c8a75f304d682f37e"
+    }
+  },
+  "metadata_sha256": {
+    "chat_template.jinja": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+    "config.json": "0aeed9aaacf8bd1856a6f0b4ee6982c6ea2aae3e45993f543955693543ee0dc8",
+    "generation_config.json": "c5b64099d0625f381cda4f2ca68b043b59f349f1019232fad430449a5591853f",
+    "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+    "tokenizer_config.json": "66e427c470fe580fe8c7b5725d857af23d8417e37fae62667ec698306a19987b"
+  }
+}

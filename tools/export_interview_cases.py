@@ -66,8 +66,8 @@ def short(value, limit=240):
 def main():
     output=ROOT/'reports/project'
     output.mkdir(parents=True,exist_ok=True)
-    index=['# 代表性轨迹：成功、分歧与指标边界','',
-        '这些案例从已经完成的固定测试集结果中事后选取，用于定性解释，不参与训练、不改变总分、不重新采样，也不代表各类现象的发生频率。',
+    index=['# 16 轮历史代表性轨迹：成功、分歧与指标边界','',
+        '这些案例来自 16 轮预算的历史测试结果，不代表新的 25 轮评测结果；事后选取仅用于定性解释，不参与训练、不改变总分、不重新采样，也不代表各类现象的发生频率。',
         '每个案例保留原始 query、完整 JSON 快照与 SHA-256；页面表格只缩略展示参数和 observation，最终回答原文完整保留。',
         'trace 中的 perturbation_status 是训练/评测侧审计标签，**没有作为 observation 输入策略**；文档展示它仅用于解释。所有工具、联系人、账户、通知、交易均为模拟数据与模拟执行。','',
         '| 案例 | 任务 | 模型 | 讲解重点 |','|---|---|---|---|']
@@ -75,7 +75,7 @@ def main():
     for case in CASES:
         folder=output/'cases'/case['slug'];folder.mkdir(parents=True,exist_ok=True)
         entries=[]
-        lines=[f"# {case['title']}",'',f"任务：`{case['task']}`；每个模型为该题唯一一次固定 seed 测评。",'',
+        lines=[f"# {case['title']}",'',f"任务：`{case['task']}`；来源为 16 轮历史评测，每个模型为该题唯一一次固定 seed 测评。",'',
                '## 观察与解释','',case['analysis'],'',f"**可讲的结论：** {case['lesson']}",'',
                f"**边界与反例：** {case['boundary']}",'']
         for model,expected in zip(case['models'],case['expected']):

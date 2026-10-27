@@ -1,0 +1,8 @@
+test_final_answer_on_round_25_is_allowed (scripts.toolmaze_agent.tests.test_round_budget.RoundBudgetTests) ... ok
+test_invalid_actions_also_consume_rounds (scripts.toolmaze_agent.tests.test_round_budget.RoundBudgetTests) ... ok
+test_same_policy_is_cut_off_at_16_under_old_budget (scripts.toolmaze_agent.tests.test_round_budget.RoundBudgetTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.006s
+
+OK

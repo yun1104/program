@@ -8,22 +8,22 @@
 
 ## 结果与阅读入口
 
-固定测试集 200 个任务实例，每题一次采样；使用最终权重，不按测试结果挑选 checkpoint。四组基础设施错误均为 0，所有请求保留在分母中。
+**主结果已按 25 轮预算重新测评**：固定测试集 200 个任务实例，每题一次采样；使用最终权重，不按测试结果挑选 checkpoint。四组基础设施错误均为 0，所有请求保留在分母中。
 
-| 模型 | 官方通过 | 严格通过 | 含协议错误的轨迹 | 达到 16 轮上限 |
+| 模型 | 官方通过 | 严格通过 | 含协议错误的轨迹 | 达到 25 轮上限 |
 |---|---:|---:|---:|---:|
-| 原始 Qwen3.5-2B | 29/200（14.5%） | 19/200（9.5%） | 121 | 81 |
-| 全参语言模型 SFT | 103/200（51.5%） | 82/200（41.0%） | 51 | 39 |
-| SFT + LoRA GRPO | 110/200（55.0%） | **105/200（52.5%）** | **20** | **13** |
-| SFT + LoRA GiGPO | **112/200（56.0%）** | 103/200（51.5%） | 27 | 26 |
+| 原始 Qwen3.5-2B | 26/200（13.0%） | 13/200（6.5%） | 130 | 91 |
+| 全参语言模型 SFT | 106/200（53.0%） | 88/200（44.0%） | 53 | 14 |
+| SFT + LoRA GRPO | 110/200（55.0%） | 105/200（52.5%） | 21 | 5 |
+| SFT + LoRA GiGPO | 114/200（57.0%） | 107/200（53.5%） | 24 | 2 |
 
-主要发现：SFT 带来主要能力提升，RL 进一步改善严格通过率和终止行为。**本次 GiGPO 没有一致优于 GRPO**：官方多通过 2 题，严格少通过 2 题。它是需要解释的实验结果，而非“新算法全面提升”的证据。
+25 轮主结果：GRPO 相对 SFT 的严格通过率变化为 +8.5 个百分点，GiGPO 相对 SFT 为 +9.5 个百分点。GiGPO 相对 GRPO：官方 +2.0、严格 +1.0 个百分点。两组训练 batch/更新数和恢复条件不同，且仅单 seed，不把该差异解释为纯算法因果效果。
 
 严格通过要求：官方通过、有显式 `final_answer`、全程无动作协议或参数 schema 错误。它仍不验证全部业务语义；案例中保留了严格通过但虚构备份完成的反例。
 
 - [实验报告：设计、配置、结果与归因边界](reports/project/experiment_report.md)
-- [7 组代表性轨迹：成功、双向分歧、共同失败、指标盲区](reports/project/representative_trajectories.md)
-- [完整评测对照表](reports/rl_eval/grpo_vs_gigpo_20261027/comparison.md) / [逐题 CSV](reports/rl_eval/grpo_vs_gigpo_20261027/paired_episodes.csv)
+- [16 轮历史代表性轨迹：成功、双向分歧、共同失败、指标盲区](reports/project/representative_trajectories.md)
+- [25 轮完整对照与 16/25 变化](reports/rl_eval/rounds25_20261027/comparison.md) / [25 轮逐题 CSV](reports/rl_eval/rounds25_20261027/paired_episodes.csv) / [16 轮历史结果](reports/rl_eval/grpo_vs_gigpo_20261027/comparison.md)
 - [案例原始出处与 SHA-256 清单](reports/project/case_manifest.json)
 
 ## 任务、数据与防泄漏
@@ -168,12 +168,12 @@ python tools/run_gigpo_full.py --gpus 0,3,4,5,6 --sampler-gpu 7 \
 
 `rl_lora_recovery.yaml` 是本轮故障恢复配置，依赖原始学生日志；新实验使用普通 RL 配置，不应伪造 replay 源。GiGPO 单卡预检入口为 `tools/run_gigpo.py` 和 `gigpo_smoke.yaml`，小样本产物与全量结果分开保存。
 
-测试协议：vLLM BF16、temperature 0.8、top_p=1、top_k 关闭；动作最多 512 tokens、上下文 8192 tokens、最多 16 轮，seed=20261026，无 JSON 强约束解码。两组 RL 各用 7 个单卡副本互斥分片，合并时核验完整覆盖 200 题。seed 按任务/trial/轮次生成，不宣称跨硬件调度逐 bit 相同。
+测试协议：vLLM BF16、temperature 0.8、top_p=1、top_k 关闭；动作最多 512 tokens、上下文 8192 tokens、最多 25 轮，seed=20261026，无 JSON 强约束解码。本次四组模型均用 8 个单卡副本互斥分片，合并时核验完整覆盖 200 题。seed 按任务/trial/轮次生成，不宣称跨硬件调度逐 bit 相同。
 
 ```bash
 # 此入口绑定本轮最终 adapter 和配置；新评测先更新输出与模型路径。
-python tools/run_rl_evaluation.py --gpus 1,2,3,4,5,6,7
-python tools/compare_rl_evaluations.py
+python tools/run_budget_evaluation.py --gpus 0,1,2,3,4,5,6,7
+python tools/compare_budget_evaluations.py
 
 # 只从保存结果重新导出案例，不调用模型或改变指标。
 python tools/export_interview_cases.py
@@ -199,8 +199,10 @@ OMP_NUM_THREADS=4 PYTHONPATH=.deps/rl:.deps/sft_fast:. \
 
 ## GitHub 分发范围与路径迁移
 
-仓库包含代码、配置、冻结划分、训练摘要、四组完整测试轨迹（共 800 条）、GiGPO 80 批优势记录及案例。模型权重、训练 rollout 大文件、完整教师采集、缓存、凭据和原始服务日志留在本地。报告中标为“本地”的路径需要自行重新产生对应产物。
+仓库包含代码、配置、冻结划分、训练摘要、16 轮与 25 轮各四组完整测试轨迹（共 1600 条）、GiGPO 80 批优势记录及案例。模型权重、训练 rollout 大文件、完整教师采集、缓存、凭据和原始服务日志留在本地。报告中标为“本地”的路径需要自行重新产生对应产物。
 
 冻结清单为保留审计哈希仍记录原服务器绝对路径；`load_task` 在原路径不存在时将已知 `data/toolmaze/` 子树定位到当前项目，再校验原 SHA-256，不重新切分数据。先运行 `python tools/bootstrap.py` 获取固定版本数据。
 
 教师配置使用 `OPENCODE_API_KEY` 环境变量。`.env.example` 仅是变量模板，程序不会自动 source 文件；不要将实际密钥提交到仓库。历史 manifest 中的本机路径是来源记录，不是克隆后的安装路径。
+
+评测预算更正：官方锁定配置的 `execution.max_rounds=25`，旧 16 轮为项目自设预算。此次全部 800 个模型/任务对重新推理，未复用旧完成结果；训练权重未重训。这里只对齐轮次上限，JSON 单动作协议与 8192/512 token 预算仍为本项目设置，并非完整复现官方原生接口配置。

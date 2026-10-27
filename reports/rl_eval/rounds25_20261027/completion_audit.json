@@ -1,0 +1,43 @@
+{
+  "max_rounds": 25,
+  "total_fresh_model_task_pairs": 800,
+  "models": {
+    "base": {
+      "episodes": 200,
+      "max_decisions": 25,
+      "official_pass": 26,
+      "strict_pass": 13,
+      "infrastructure_errors": 0,
+      "reused_16_round_episodes": 0
+    },
+    "sft": {
+      "episodes": 200,
+      "max_decisions": 25,
+      "official_pass": 106,
+      "strict_pass": 88,
+      "infrastructure_errors": 0,
+      "reused_16_round_episodes": 0
+    },
+    "grpo": {
+      "episodes": 200,
+      "max_decisions": 25,
+      "official_pass": 110,
+      "strict_pass": 105,
+      "infrastructure_errors": 0,
+      "reused_16_round_episodes": 0
+    },
+    "gigpo": {
+      "episodes": 200,
+      "max_decisions": 25,
+      "official_pass": 114,
+      "strict_pass": 107,
+      "infrastructure_errors": 0,
+      "reused_16_round_episodes": 0
+    }
+  },
+  "local_document_links_checked": 88,
+  "broken_links": [],
+  "historical_case_snapshot_hashes_unchanged": true,
+  "old_16_results_retained": true,
+  "new_training_performed": false
+}

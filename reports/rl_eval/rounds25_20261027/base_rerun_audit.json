@@ -1,0 +1,10 @@
+{
+  "same_model_snapshot": true,
+  "same_generation_config": true,
+  "same_split": true,
+  "identical_initial_messages": 200,
+  "identical_first_action_token_ids": 195,
+  "entire_old_action_sequence_remains_prefix": 62,
+  "n": 200,
+  "note": "A fresh stochastic rerun with changed replica partitioning; not deterministic continuation of saved trajectories."
+}

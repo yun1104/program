@@ -1,0 +1,100 @@
+{
+  "state": "complete",
+  "launcher_pid": 2879098,
+  "gpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "suite": {
+    "max_rounds": 25,
+    "expected_tasks": 200,
+    "report_output": "reports/rl_eval/rounds25_20261027",
+    "models": [
+      {
+        "name": "base",
+        "config": "scripts/toolmaze_agent/configs/base_eval_rounds25.yaml",
+        "historical_16_run": "runs/eval/qwen35_2b_base_vllm_test_20261026"
+      },
+      {
+        "name": "sft",
+        "config": "scripts/toolmaze_agent/configs/sft_eval_rounds25.yaml",
+        "historical_16_run": "runs/eval/qwen35_2b_sft_vllm_test_20261026"
+      },
+      {
+        "name": "grpo",
+        "config": "scripts/toolmaze_agent/configs/grpo_eval_rounds25.yaml",
+        "historical_16_run": "runs/eval/qwen35_2b_grpo_vllm_test_20261027",
+        "adapter": "runs/grpo_lora_recovery_20261026/final"
+      },
+      {
+        "name": "gigpo",
+        "config": "scripts/toolmaze_agent/configs/gigpo_eval_rounds25.yaml",
+        "historical_16_run": "runs/eval/qwen35_2b_gigpo_vllm_test_20261027",
+        "adapter": "runs/gigpo_full_20261027/final"
+      }
+    ]
+  },
+  "suite_sha256": "b82caa40be427df642d914655dbc08358d9830a7ff0601ac128ce894140aa28a",
+  "started_at_unix": 1793075443.4905257,
+  "models": {
+    "base": {
+      "run": "runs/eval/qwen35_2b_base_vllm_test_rounds25_20261027",
+      "metrics": {
+        "n": 200,
+        "official_pass_rate": 0.13,
+        "strict_pass_rate": 0.065,
+        "infrastructure_errors": 0,
+        "mean_tool_calls": 7.26,
+        "mean_tokens": 53571.335
+      },
+      "max_model_decisions": 25
+    },
+    "sft": {
+      "run": "runs/eval/qwen35_2b_sft_vllm_test_rounds25_20261027",
+      "metrics": {
+        "n": 200,
+        "official_pass_rate": 0.53,
+        "strict_pass_rate": 0.44,
+        "infrastructure_errors": 0,
+        "mean_tool_calls": 9.565,
+        "mean_tokens": 34076.235
+      },
+      "max_model_decisions": 25
+    },
+    "grpo": {
+      "run": "runs/eval/qwen35_2b_grpo_vllm_test_rounds25_20261027",
+      "metrics": {
+        "n": 200,
+        "official_pass_rate": 0.55,
+        "strict_pass_rate": 0.525,
+        "infrastructure_errors": 0,
+        "mean_tool_calls": 8.485,
+        "mean_tokens": 27034.81
+      },
+      "max_model_decisions": 25
+    },
+    "gigpo": {
+      "run": "runs/eval/qwen35_2b_gigpo_vllm_test_rounds25_20261027",
+      "metrics": {
+        "n": 200,
+        "official_pass_rate": 0.57,
+        "strict_pass_rate": 0.535,
+        "infrastructure_errors": 0,
+        "mean_tool_calls": 8.665,
+        "mean_tokens": 27761.005
+      },
+      "max_model_decisions": 25
+    }
+  },
+  "policy": "Fresh 25-round evaluations, no inheritance from 16-round episodes; same frozen final weights.",
+  "current_model": "gigpo",
+  "phase": "complete",
+  "child_pid": 2940949,
+  "ended_at_unix": 1793076556.123405
+}

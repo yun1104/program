@@ -57,12 +57,12 @@ def main():
             else 'both_fail' for k in grpo))
     report = ROOT/'reports/rl_eval/grpo_vs_gigpo_20261027'
     report.mkdir(parents=True,exist_ok=True)
-    comparison = {'runs':runs,'n':200,'metrics':metrics,'behavior':behavior,'grpo_vs_gigpo_paired':paired,
+    comparison = {'max_rounds':reference[0]['project_config']['max_rounds'],'runs':runs,'n':200,'metrics':metrics,'behavior':behavior,'grpo_vs_gigpo_paired':paired,
         'generation':reference[0]['config']['generation'],
         'historical_sft_runtime_audit':'reports/rl_eval/grpo_vs_gigpo_20261027/sft_runtime_replay.json',
         'limitation':'One fixed-seed trial per task. GRPO batch 128/100 updates; GiGPO batch 160/80 updates. Equal 12800-trajectory training budget, different batch size.'}
     write_json(report/'comparison.json',comparison)
-    lines = ['# GRPO 与 GiGPO：固定测试集对比','',
+    lines = ['# GRPO 与 GiGPO：16 轮历史测试集对比','',
         '200 道测试题，每题一次采样；使用各自最终 checkpoint，未按测试结果选择权重或重试。','',
         '| 模型 | 官方通过 | 严格通过 | 基础设施错误 | 平均工具调用 |','|---|---:|---:|---:|---:|']
     for name,values in metrics.items():

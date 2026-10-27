@@ -1,0 +1,20 @@
+{
+  "official_config": "tools/ToolMaze/evaluation/configs/eval_config.yaml",
+  "official_config_sha256": "6a9dae1fed2cdb754ab069ae1e83b0d1bc8a1a54bad09a8e6b9a223eafab8a00",
+  "official_execution_max_rounds": 25,
+  "previous_project_max_rounds": 16,
+  "new_evaluation_max_rounds": 25,
+  "only_project_config_change": "max_rounds: 16 -> 25",
+  "original_training_config_unchanged": true,
+  "models_to_evaluate": [
+    "base",
+    "sft",
+    "grpo",
+    "gigpo"
+  ],
+  "test_tasks_per_model": 200,
+  "fresh_model_task_pairs": 800,
+  "context_tokens": 8192,
+  "action_tokens": 512,
+  "limitation": "Only decision budget aligned; project single-action JSON inference protocol remains distinct from official native-tool inference."
+}
